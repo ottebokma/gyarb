@@ -1,0 +1,25 @@
+% Master LaTex file for gyarb
+
+% Shortcuts
+% C-c C-c compile
+
+\documentclass[11pt]{article}
+
+% packages
+\usepackage[backend=biber]{biblatex}
+\addbibresource{garb_bibl/garb_bibl.bib}
+
+\title{Gymnasiearbete}
+\author{Otte Bokma}
+
+\begin{document}
+
+\maketitle
+
+\section{Bibliography}
+
+As \cite{noauthor_feature_2020} bla, bla, bla...
+
+\printbibliography
+
+\end{document}

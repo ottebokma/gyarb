@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'garb_bokma.blg'
+[75] biber:322> INFO - === zo sep 20, 2020, 20:42:17
+[92] Biber.pm:415> INFO - Reading 'garb_bokma.bcf'
+[160] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[175] Biber.pm:4256> INFO - Processing section 0
+[175] Utils.pm:75> INFO - Globbing data source 'garb_bibl/garb_bibl.bib'
+[175] Utils.pm:91> INFO - Globbed data source 'garb_bibl/garb_bibl.bib' to garb_bibl/garb_bibl.bib
+[188] Biber.pm:4455> INFO - Looking for bibtex format file 'garb_bibl/garb_bibl.bib' for section 0
+[189] bibtex.pm:1653> INFO - LaTeX decoding ...
+[194] bibtex.pm:1471> INFO - Found BibTeX data source 'garb_bibl/garb_bibl.bib'
+[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[222] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[222] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[228] bbl.pm:652> INFO - Writing 'garb_bokma.bbl' with encoding 'UTF-8'
+[229] bbl.pm:755> INFO - Output to garb_bokma.bbl
