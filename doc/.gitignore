@@ -1,8 +1,11 @@
 garb_bibl/
+../src/
+../tbi-data/
 *.aux
 *.bbl
 *.bcf
 *.blg
 *.log
 *.pdf
+*.toc
 *.xml
