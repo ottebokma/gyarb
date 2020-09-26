@@ -1,0 +1,10 @@
+/tbi-data
+/doc/garb_bibl
+
+*.aux
+*.bbl
+*.bcf
+*.log
+*.pdf
+*.toc
+*.xml
