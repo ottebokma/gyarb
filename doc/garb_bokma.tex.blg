@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'garb_bokma.tex.blg'
+[69] biber:322> INFO - === za okt 10, 2020, 13:50:04
+[166] Utils.pm:309> ERROR - Cannot find 'garb_bokma.tex.bcf'!
+[166] Biber.pm:132> INFO - ERRORS: 1

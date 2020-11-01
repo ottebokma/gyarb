@@ -1,0 +1,28 @@
+variable_name,variable_type,variable_description,values
+PatientNum,String,TRACK-TBI pilot unique identifier,De-identified Patient ID
+Marshall,Numeric,Marshall CT Score,Range from 1 - 6
+Rotterdam,Numeric,Rotterdam CT Score,Range from 1 - 6
+CT_INTRACRANIAL_FINAL,Numeric,CT Brain Pathology,"0 = ""No"", 1 = ""Yes"""
+SKULLFX,Numeric,CT Skull Fracture,"0 = ""No"", 1 = ""Yes"""
+SKULLBASEFX,Numeric,CT Skull Base Fracture,"0 = ""No"", 1 = ""Yes"""
+FACIALFX,Numeric,CT Facial Fracture,"0 = ""No"", 1 = ""Yes"""
+EDH_FINAL,Numeric,CT Epidural Hematoma,"0 = ""No"", 1 = ""Yes"""
+SDH_FINAL,Numeric,CT Subdural Hematoma,"0 = ""No"", 1 = ""Yes"""
+SAH_FINAL,Numeric,CT Subarachnoid Hemorrhage,"0 = ""No"", 1 = ""Yes"""
+CONTUSION_FINAL,Numeric,CT Contusion,"0 = ""No"", 1 = ""Yes"""
+MIDLINESHIFT_FINAL,Numeric,CT Midline Shift,"0 = ""No"", 1 = ""Yes"""
+CISTERNCOMP_FINAL,Numeric,CT Cisternal Compression,"0 = ""No"", 1 = ""Yes"""
+MR_result,Numeric,MRI Brain Pathology,"0 = ""No"", 1 = ""Yes"", 2 = ""Indeterminate"""
+GOSE_OverallScore3M,Numeric,GOSE Score (3 months),Range from 1 - 8
+GOSE_OverallScore6M,Numeric,GOSE Score (6 months),Range from 1 - 8
+PTSD_6mo,Numeric,PTSD DSM-IV Diagnosis (6 months),"0 = ""No"", 1 = ""Yes"""
+PCLTotalScore_6mo,Numeric,PTSD Checklist-Civilian Total Score (6 months),Range from 17 - 83
+WAIS_PSI_Composite_6mo,Numeric,WAIS PSI Composite Score (6 months),Range from 50 - 150
+CVLTShortDelayCuedRecallStandardScore_6mo,Numeric,CVLT Short Delay Cued Recall Standard Score (6 months),Range from -4.0 - 2.5
+CVLTLongDelayCuedRecallStandardScore_6mo,Numeric,CVLT Long Delay Cued Recall Standard Score (6 months),Range from -3.5 - 2.5
+rs4680,Numeric,COMT SNP Genotype,"1 = ""Met/Met"", 2 = ""Met/Val"", 3 = ""Val/Val"""
+rs6277,Numeric,DRD2 SNP Genotype,"1 = ""C/C"", 2 = ""C/T"", 3 = ""T/T"""
+rs3219119,Numeric,PARP1 SNP Genotype,"1 = ""A/A"", 2 = ""A/T"", 3 = ""T/T"""
+rs11604671,Numeric,ANKK1 SNP Gly318Arg,"1 = ""A/A"", 2 = ""A/G"", 3 = ""G/G"""
+rs4938016,Numeric,ANKK1 SNP Gly442Arg,"1 = ""C/C"", 2 = ""C/G"", 3 = ""G/G"""
+rs1800497,Numeric,ANKK1 SNP Glu713Lys,"1 = ""C/C"", 2 = ""C/T"", 3 = ""T/T"""
