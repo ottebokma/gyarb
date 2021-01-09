@@ -1,0 +1,99 @@
+% Master LaTex file for gyarb
+
+% Shortcuts
+% C-c C-c compile
+
+\documentclass[11pt]{article}
+
+% packages
+\usepackage[backend=biber]{biblatex}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% settings
+\addbibresource{garb_bibl/garb_bibl.bib}
+
+% title
+\title{Gymnasiearbete {\LaTeX} dokument}
+\author{Otte Bokma}
+
+% document
+\begin{document}
+
+\begin{titlepage}
+
+  \begin{center}
+    \huge{Prediction of long term effects of TBI using machine learning}
+    \\[1cm]
+    \large{Can agglomerative clustering as a machine learning method be used to classify long term effects of traumatic brain injury}
+  \end{center}
+\end{titlepage}
+
+\section*{Sammanfattning}
+
+\subsection*{Bakgrund}
+
+Hjärnskakningar är skador som är mer eller mindre vanliga beroende på en persons dagliga aktiviteter. De framkommer framför allt bland idrottare inom vissa sporter, emepelvis boxning, amerikansk fotboll och ishockey. Hjänskakningar är även en relativt vanlig skada vid trafikolyckor (whiplash). Det finns dock väldigt många olika former av hjänskakningar och symptomen varierar på både lång och kort sikt väldigt mycket mellan fallen. Att förutsäga de långvariga symptomen kan vara väldigt svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.\\
+\\
+Artificiell intelligens är något som används väldigt mycket i nuläget för en mängd olika saker. Artificiell intelligens har visat sig kunna användas väldigt effektivt för bland annat denna typ av uppgift, att identifiera eller förutsäga något utifrån olika variabler. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning utifrån de kortvariga symptomen.
+
+\subsection*{Metod och Resultat}
+
+\subsection*{Slutsats}
+
+\section*{Abstract}
+
+\subsection*{Background}
+
+Traumatic Brain injury (TBI) is a condition with varying presence depending on a persons daily activities. Above all TBI shows among athletes of some sports, such as boxing, american football and icehockey. TBI is also a relatively common injury in traffic accidents(, often in connection with a whiplash type injury). There are many different types of TBI and the sypmtoms can vary widely in both long term and short term. To predict the long term effects of TBI can therefore be very hard. Som people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.\\
+\\
+Nowadays machine learning is used widely and has many different kinds of application. Machine learning has been shown to be very suitable for this type of application in a lot of instances, to identify or pedict something based on a set of variables. Thus it could be conceivable that one could to at least some extent identify possible long term effects based on the short term symptoms of a TBI patient using machine learning.\\
+\\
+*
+Traumatic brain injury (TBI) is a condition that can be quite hard to diagnose and even if it is diagnosed the long term effects and symptoms can be hard to identify. Machine learning and artificial intelligence has in recent times gained popularity as is gives a way of identifying and predicting things that humans can not always do. As for TBI there is a lot of data to be collected about a patients health status at the time of being examined. This data is unfortunately quite hard for humans to interpret. Using machine learning to interpret this data is a great opportunity to harness the power of data classification that is machine learning.
+*
+
+\subsection*{Method and Findings}
+The method of machine learning used was agglomerative clustering, or \``Bottom up\'' hierarchical clustering. Hieararchical clustering is an algorithm that seeks to make a hierarchy of clusters.
+In agglomerative clustering each datapoint is at first treated as an own cluster. This essentially means that if you wanted to you could treat each object of data as its own cluster. The datapoints are then grouped together with the points that are the nearest to them creating larger clusters, these clusters are then grouped with the nearest clusters to them. And so the algorithm goes forward until all data has become a single cluster.\cite{HierarchicalClustering2020}
+
+\subsection*{Conclusion}
+
+\tableofcontents
+
+\section{Introduction}
+
+\subsection{Purpose}
+The purpose of
+
+
+\subsection{``Frågeställning''}
+
+\section{Method}
+
+\section{Results}
+
+\section{Discussion}
+The classification choice problem:\\
+For classification of TBI it is intended to get a prediction of what \``class\" an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.
+
+\\
+The dataset that is used has a quite limited sample size. The number of samples being so low means that there is a low chance of there being great consistency to be found in the data. What also affects the results is an inherent flaw in the way the research has been conducted. As the intention of a program like this is to find patterns where we humans cannot find them it is important that the program get raw data about something. In this case the data has already been processed and interpreted by humans which makes means that the program only has access to data that is already processed by humans. If humans cannot, using their observations, with certainty say what has been damaged in the brain and what this will lead to the data that the humans collect will be flawed in this same way.\\
+\\
+To increase chances of success in a project like this it would be advised to use data that has in no way been interpreted by humans. Imaging of the brain is what would be most easily accessible and also seems to be the most relevant for this purpose. Then letting an artificial intelligence algorithm try to classify them into subgroups. Although even this method suffers from the classification choice problem.\\
+\\
+The different ways for classification. Unsupervised vs supervised machine learning algorithms
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5cm]{graphics/ubuntu.png}
+  \caption{Ubuntu logo}
+\end{figure}
+
+As \cite{FeatureSelection2020} bla, bla, bla...\\
+
+\section{Bibliography}
+
+\printbibliography
+
+\end{document}
