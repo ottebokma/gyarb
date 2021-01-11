@@ -2,6 +2,9 @@
 
 % Shortcuts
 % C-c C-c compile
+% Compile
+% 1: pdflatex garb_bokma.tex, 2: biber garb_bokma, 3: pdflatex garb_bokma.tex
+
 
 \documentclass[11pt]{article}
 
@@ -25,7 +28,7 @@
   \begin{center}
     \huge{Prediction of long term effects of TBI using machine learning}
     \\[1cm]
-    \large{Can agglomerative clustering as a machine learning method be used to classify long term effects of traumatic brain injury}
+    \large{Using agglomerative clustering as a machine learning method to try to classify long term effects of traumatic brain injury}
   \end{center}
 \end{titlepage}
 
@@ -54,8 +57,8 @@ Traumatic brain injury (TBI) is a condition that can be quite hard to diagnose a
 *
 
 \subsection*{Method and Findings}
-The method of machine learning used was agglomerative clustering, or \``Bottom up\'' hierarchical clustering. Hieararchical clustering is an algorithm that seeks to make a hierarchy of clusters.
-In agglomerative clustering each datapoint is at first treated as an own cluster. This essentially means that if you wanted to you could treat each object of data as its own cluster. The datapoints are then grouped together with the points that are the nearest to them creating larger clusters, these clusters are then grouped with the nearest clusters to them. And so the algorithm goes forward until all data has become a single cluster.\cite{HierarchicalClustering2020}
+The method of machine learning used was agglomerative clustering, or bottom up hierarchical clustering. Hieararchical clustering is an algorithm that seeks to make a hierarchy of clusters.
+In agglomerative clustering each datapoint is at first treated as an own cluster. This essentially means that if you wanted to you could treat each object of data as its own cluster. The datapoints are then grouped together with the points that are the nearest to them creating larger clusters, these clusters are then grouped with the nearest clusters to them. And so the algorithm goes forward until all data has become a single cluster.\cite{HierarchicalClustering2020a}
 
 \subsection*{Conclusion}
 
@@ -64,33 +67,84 @@ In agglomerative clustering each datapoint is at first treated as an own cluster
 \section{Introduction}
 
 \subsection{Purpose}
-The purpose of
-
 
 \subsection{``Frågeställning''}
 
 \section{Method}
 
 \section{Results}
+\subsection{Symptomatic Factors}
+\subsubsection{GOSE Overallscore 3 months}
+Affinity: euclidean, Linkage: ward,      Result: 0.03728070175438596
+Affinity: euclidean, Linkage: complete,  Result: 0.03728070175438596
+Affinity: manhattan, Linkage: complete,  Result: 0.046052631578947366
+Affinity: l1,        Linkage: complete,  Result: 0.046052631578947366
+Affinity: l2,        Linkage: complete,  Result: 0.03728070175438596
+Affinity: cosine,    Linkage: complete,  Result: 0.09429824561403509
+Affinity: euclidean, Linkage: average,   Result: 0.03508771929824561
+Affinity: manhattan, Linkage: average,   Result: 0.09429824561403509
+Affinity: l1,        Linkage: average,   Result: 0.09429824561403509
+Affinity: l2,        Linkage: average,   Result: 0.03508771929824561
+Affinity: cosine,    Linkage: average,   Result: 0.06798245614035088
+Affinity: euclidean, Linkage: single,    Result: 0.05263157894736842
+Affinity: manhattan, Linkage: single,    Result: 0.05263157894736842
+Affinity: l1,        Linkage: single,    Result: 0.05263157894736842
+Affinity: l2,        Linkage: single,    Result: 0.05263157894736842
+Affinity: cosine,    Linkage: single,    Result: 0.05482456140350877
+\subsubsection{GOSE Overallscore 6 months}
+Affinity: euclidean, Linkage: ward,      Result: 0.03614457831325301
+Affinity: euclidean, Linkage: complete,  Result: 0.07228915662650602
+Affinity: manhattan, Linkage: complete,  Result: 0.07228915662650602
+Affinity: l1,        Linkage: complete,  Result: 0.07228915662650602
+Affinity: l2,        Linkage: complete,  Result: 0.07228915662650602
+Affinity: cosine,    Linkage: complete,  Result: 0.033734939759036145
+Affinity: euclidean, Linkage: average,   Result: 0.03614457831325301
+Affinity: manhattan, Linkage: average,   Result: 0.06265060240963856
+Affinity: l1,        Linkage: average,   Result: 0.06265060240963856
+Affinity: l2,        Linkage: average,   Result: 0.03614457831325301
+Affinity: cosine,    Linkage: average,   Result: 0.06746987951807229
+Affinity: euclidean, Linkage: single,    Result: 0.043373493975903614
+Affinity: manhattan, Linkage: single,    Result: 0.043373493975903614
+Affinity: l1,        Linkage: single,    Result: 0.043373493975903614
+Affinity: l2,        Linkage: single,    Result: 0.043373493975903614
+Affinity: cosine,    Linkage: single,    Result: 0.06746987951807229
+\subsubsection{PTSD 6 months}
+Affinity: euclidean, Linkage: ward,      Result: 0.6804733727810651
+Affinity: euclidean, Linkage: complete,  Result: 0.2869822485207101
+Affinity: manhattan, Linkage: complete,  Result: 0.34023668639053256
+Affinity: l1,        Linkage: complete,  Result: 0.34023668639053256
+Affinity: l2,        Linkage: complete,  Result: 0.2869822485207101
+Affinity: cosine,    Linkage: complete,  Result: 0.7307692307692307
+Affinity: euclidean, Linkage: average,   Result: 0.31952662721893493
+Affinity: manhattan, Linkage: average,   Result: 0.3224852071005917
+Affinity: l1,        Linkage: average,   Result: 0.3224852071005917
+Affinity: l2,        Linkage: average,   Result: 0.31952662721893493
+Affinity: cosine,    Linkage: average,   Result: 0.2692307692307692
+Affinity: euclidean, Linkage: single,    Result: 0.757396449704142
+Affinity: manhattan, Linkage: single,    Result: 0.757396449704142
+Affinity: l1,        Linkage: single,    Result: 0.757396449704142
+Affinity: l2,        Linkage: single,    Result: 0.757396449704142
+Affinity: cosine,    Linkage: single,    Result: 0.757396449704142
+\subsection{Genetic Factors}
+
+
+%\subsection{Combined Factors}
 
 \section{Discussion}
 The classification choice problem:\\
-For classification of TBI it is intended to get a prediction of what \``class\" an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.
-
+For classification of TBI it is intended to get a prediction of what class an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.\\
 \\
 The dataset that is used has a quite limited sample size. The number of samples being so low means that there is a low chance of there being great consistency to be found in the data. What also affects the results is an inherent flaw in the way the research has been conducted. As the intention of a program like this is to find patterns where we humans cannot find them it is important that the program get raw data about something. In this case the data has already been processed and interpreted by humans which makes means that the program only has access to data that is already processed by humans. If humans cannot, using their observations, with certainty say what has been damaged in the brain and what this will lead to the data that the humans collect will be flawed in this same way.\\
 \\
 To increase chances of success in a project like this it would be advised to use data that has in no way been interpreted by humans. Imaging of the brain is what would be most easily accessible and also seems to be the most relevant for this purpose. Then letting an artificial intelligence algorithm try to classify them into subgroups. Although even this method suffers from the classification choice problem.\\
 \\
-The different ways for classification. Unsupervised vs supervised machine learning algorithms
+The different ways for classification. Unsupervised vs supervised machine learning algorithms.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=5cm]{graphics/ubuntu.png}
   \caption{Ubuntu logo}
 \end{figure}
-
-As \cite{FeatureSelection2020} bla, bla, bla...\\
 
 \section{Bibliography}
 
