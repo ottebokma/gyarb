@@ -1,0 +1,17 @@
+Affinity, Linkage, Result
+euclidean, ward, 0.6804733727810651
+euclidean, complete, 0.2869822485207101
+manhattan, complete, 0.34023668639053256
+l1, complete, 0.34023668639053256
+l2, complete, 0.2869822485207101
+cosine, complete, 0.7307692307692307
+euclidean, average, 0.31952662721893493
+manhattan, average, 0.3224852071005917
+l1, average, 0.3224852071005917
+l2, average, 0.31952662721893493
+cosine, average, 0.2692307692307692
+euclidean, single, 0.757396449704142
+manhattan, single, 0.757396449704142
+l1, single, 0.757396449704142
+l2, single, 0.757396449704142
+cosine, single, 0.757396449704142

@@ -1,3 +1,4 @@
+
 % Master LaTex file for gyarb
 
 % Shortcuts
@@ -12,6 +13,7 @@
 \usepackage[backend=biber]{biblatex}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{csvsimple}
 
 % settings
 \addbibresource{garb_bibl/garb_bibl.bib}
@@ -26,7 +28,7 @@
 \begin{titlepage}
 
   \begin{center}
-    \huge{Prediction of long term effects of TBI using machine learning}
+    \huge{Predicting long term effects of TBI using machine learning}
     \\[1cm]
     \large{Using agglomerative clustering as a machine learning method to try to classify long term effects of traumatic brain injury}
   \end{center}
@@ -72,63 +74,79 @@ In agglomerative clustering each datapoint is at first treated as an own cluster
 
 \section{Method}
 
-\section{Results}
+\section{Factors}
+\subsection{Sympomatic}
+\subsubsection{Marshall CT Score}
+\subsubsection{Rotterdam CT Score}
+\subsubsection{CT Brain Pathology}
+\subsubsection{CT Skull Fracture}
+\subsubsection{CT Skull Base Fracture}
+\subsubsection{CT Facial Fracture}
+\subsubsection{CT Epidural Hematoma}
+\subsubsection{CT Subdural Hematoma}
+\subsubsection{CT Subarachnoid Hemorrhage}
+\subsubsection{CT Contusion}
+\subsubsection{CT Midline Shift}
+\subsubsection{CT Cisternal Compression}
+\subsection{Genetic}
+\subsubsection{rs4680}
+\subsubsection{rs6277}
+\subsubsection{rs3219119}
+\subsubsection{rs11604671}
+\subsubsection{rs4938016}
+\subsubsection{rs1800497}
+
+\section{SVM Results}
+The support vector machine is a supervised learning method which meand the data has to be split up into training and testing data. This split affects the results when the classification is socored. Using different training data means the classes will be different and thus it will classify the data differently depending on the training data.
 \subsection{Symptomatic Factors}
 \subsubsection{GOSE Overallscore 3 months}
-Affinity: euclidean, Linkage: ward,      Result: 0.03728070175438596
-Affinity: euclidean, Linkage: complete,  Result: 0.03728070175438596
-Affinity: manhattan, Linkage: complete,  Result: 0.046052631578947366
-Affinity: l1,        Linkage: complete,  Result: 0.046052631578947366
-Affinity: l2,        Linkage: complete,  Result: 0.03728070175438596
-Affinity: cosine,    Linkage: complete,  Result: 0.09429824561403509
-Affinity: euclidean, Linkage: average,   Result: 0.03508771929824561
-Affinity: manhattan, Linkage: average,   Result: 0.09429824561403509
-Affinity: l1,        Linkage: average,   Result: 0.09429824561403509
-Affinity: l2,        Linkage: average,   Result: 0.03508771929824561
-Affinity: cosine,    Linkage: average,   Result: 0.06798245614035088
-Affinity: euclidean, Linkage: single,    Result: 0.05263157894736842
-Affinity: manhattan, Linkage: single,    Result: 0.05263157894736842
-Affinity: l1,        Linkage: single,    Result: 0.05263157894736842
-Affinity: l2,        Linkage: single,    Result: 0.05263157894736842
-Affinity: cosine,    Linkage: single,    Result: 0.05482456140350877
+\csvautotabular{result/smp_svm_gose3.csv}
 \subsubsection{GOSE Overallscore 6 months}
-Affinity: euclidean, Linkage: ward,      Result: 0.03614457831325301
-Affinity: euclidean, Linkage: complete,  Result: 0.07228915662650602
-Affinity: manhattan, Linkage: complete,  Result: 0.07228915662650602
-Affinity: l1,        Linkage: complete,  Result: 0.07228915662650602
-Affinity: l2,        Linkage: complete,  Result: 0.07228915662650602
-Affinity: cosine,    Linkage: complete,  Result: 0.033734939759036145
-Affinity: euclidean, Linkage: average,   Result: 0.03614457831325301
-Affinity: manhattan, Linkage: average,   Result: 0.06265060240963856
-Affinity: l1,        Linkage: average,   Result: 0.06265060240963856
-Affinity: l2,        Linkage: average,   Result: 0.03614457831325301
-Affinity: cosine,    Linkage: average,   Result: 0.06746987951807229
-Affinity: euclidean, Linkage: single,    Result: 0.043373493975903614
-Affinity: manhattan, Linkage: single,    Result: 0.043373493975903614
-Affinity: l1,        Linkage: single,    Result: 0.043373493975903614
-Affinity: l2,        Linkage: single,    Result: 0.043373493975903614
-Affinity: cosine,    Linkage: single,    Result: 0.06746987951807229
+\csvautotabular{result/smp_svm_gose6.csv}
 \subsubsection{PTSD 6 months}
-Affinity: euclidean, Linkage: ward,      Result: 0.6804733727810651
-Affinity: euclidean, Linkage: complete,  Result: 0.2869822485207101
-Affinity: manhattan, Linkage: complete,  Result: 0.34023668639053256
-Affinity: l1,        Linkage: complete,  Result: 0.34023668639053256
-Affinity: l2,        Linkage: complete,  Result: 0.2869822485207101
-Affinity: cosine,    Linkage: complete,  Result: 0.7307692307692307
-Affinity: euclidean, Linkage: average,   Result: 0.31952662721893493
-Affinity: manhattan, Linkage: average,   Result: 0.3224852071005917
-Affinity: l1,        Linkage: average,   Result: 0.3224852071005917
-Affinity: l2,        Linkage: average,   Result: 0.31952662721893493
-Affinity: cosine,    Linkage: average,   Result: 0.2692307692307692
-Affinity: euclidean, Linkage: single,    Result: 0.757396449704142
-Affinity: manhattan, Linkage: single,    Result: 0.757396449704142
-Affinity: l1,        Linkage: single,    Result: 0.757396449704142
-Affinity: l2,        Linkage: single,    Result: 0.757396449704142
-Affinity: cosine,    Linkage: single,    Result: 0.757396449704142
+\csvautotabular{result/smp_svm_ptsd.csv}
+
 \subsection{Genetic Factors}
+\subsubsection{GOSE Overallscore 3 months}
+\csvautotabular{result/gen_svm_gose3.csv}
+\subsubsection{GOSE Overallscore 6 months}
+\csvautotabular{result/gen_svm_gose6.csv}
+\subsubsection{PTSD 6 months}
+\csvautotabular{result/gen_svm_ptsd.csv}
 
+\subsection{Combined Factors}
+\subsubsection{GOSE Overallscore 3 months}
+\csvautotabular{result/cmb_svm_gose3.csv}
+\subsubsection{GOSE Overallscore 6 months}
+\csvautotabular{result/cmb_svm_gose6.csv}
+\subsubsection{PTSD 6 months}
+\csvautotabular{result/cmb_svm_ptsd.csv}
 
-%\subsection{Combined Factors}
+\section{Clustering Results}
+The agglomerative clustering algorithm always runs on all the data, and thus the results are always the same when running or re-runnign the algorithm.
+\subsection{Symptomatic Factors}
+\subsubsection{GOSE Overallscore 3 months}
+\csvautotabular{result/smp_clst_gose3.csv}
+\subsubsection{GOSE Overallscore 6 months}
+\csvautotabular{result/smp_clst_gose6.csv}
+\subsubsection{PTSD 6 months}
+\csvautotabular{result/smp_clst_ptsd.csv}
+
+\subsection{Genetic Factors}
+\subsubsection{GOSE Overallscore 3 months}
+\csvautotabular{result/gen_clst_gose3.csv}
+\subsubsection{GOSE Overallscore 6 months}
+\csvautotabular{result/gen_clst_gose6.csv}
+\subsubsection{PTSD 6 months}
+\csvautotabular{result/gen_clst_ptsd.csv}
+
+\subsection{Combined Factors}
+\subsubsection{GOSE Overallscore 3 months}
+\csvautotabular{result/cmb_clst_gose3.csv}
+\subsubsection{GOSE Overallscore 6 months}
+\csvautotabular{result/cmb_clst_gose6.csv}
+\subsubsection{PTSD 6 months}
+\csvautotabular{result/cmb_clst_ptsd.csv}
 
 \section{Discussion}
 The classification choice problem:\\

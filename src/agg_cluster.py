@@ -27,9 +27,9 @@ data = pd.read_csv("data/journal_pone_0169490_s010.csv")
 
 data.columns = ["patientnum", "marshall", "rotterdam", "ct_intracranial_final", "skullfx", "skullbasefx", "facialfx", "edh_final", "sdh_final", "sah_final", "contusion_final", "midlineshift_final", "cisterncomp_final", "mr_result", "gose_overallscore3m", "gose_overallscore6m", "ptsd_6mo", "wais_psi_composite_6mo", "cvltshortdelaycuedrecallstandardscore_6mo", "cvltlongdelaycuedrecallstandardscore_6mo", "rs4680", "rs6277", "rs3219119", "rs11604671", "rs4938016", "rs1800497"]
 
-data = data.dropna(subset=[cmp], how="any")
+data = data.dropna(how="any")
 
-X = data.loc[:, ("marshall","rotterdam","ct_intracranial_final", "skullfx", "skullbasefx","facialfx","edh_final", "sdh_final", "sah_final", "contusion_final", "midlineshift_final", "cisterncomp_final")].values
+X = data.loc[:, ("marshall", "rotterdam", "ct_intracranial_final", "skullfx", "skullbasefx", "facialfx", "edh_final", "sdh_final", "sah_final", "contusion_final", "midlineshift_final", "cisterncomp_final", "rs4680", "rs6277", "rs3219119", "rs11604671", "rs4938016", "rs1800497")].values
 y = data.loc[:, (cmp)].values
 
 y = y.astype(int)
