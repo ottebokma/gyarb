@@ -15,10 +15,9 @@ data = pd.read_csv("data/journal_pone_0169490_s010.csv")
 "cvltlongdelaycuedrecallstandardscore_6mo", "rs4680", "rs6277", "rs3219119", "rs11604671", "rs4938016", "rs1800497"
 """
 
-data = data[["marshall", "rs4680", "rs6277", "rs3219119", "rs11604671", "rs4938016", "rs1800497", "ct_intracranial_final", "skullfx", "skullbasefx",
-"facialfx", "edh_final", "sdh_final", "sah_final", "contusion_final", "midlineshift_final", "cisterncomp_final"]]
+data = data[["ptsd_6mo", "marshall", "rotterdam"]]
 
-predict = "marshall"
+predict = "ptsd_6mo"
 
 data = data.dropna(how="any")
 
@@ -31,13 +30,13 @@ print (data.shape)
 
 sum_acc = 0
 
-iter = 5
+iter = 3000
 
 for n in range(iter):
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.2)
 
 
-    clf = svm.SVC(kernel="poly", degree = 3)
+    clf = svm.SVC(kernel="linear", degree = 3)
     clf.fit(x_train, y_train)
 
     y_pred = clf.predict(x_test)
@@ -47,7 +46,7 @@ for n in range(iter):
 
     sum_acc += acc
 
-#print(sum_acc)
+print(sum_acc)
 
 avg = sum_acc / iter
 print (avg)
@@ -55,7 +54,7 @@ print (avg)
 print (y_pred)
 print (y_test)
 
-
+"""
 clf2 = KNeighborsClassifier(n_neighbors = 4)
 clf2.fit(x_train, y_train)
 
@@ -63,3 +62,4 @@ y_pred2 = clf2.predict(x_test)
 
 acc2 = metrics.accuracy_score(y_test, y_pred2)
 print ("KNN: " + str(acc2))
+"""
