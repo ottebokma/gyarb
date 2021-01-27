@@ -15,9 +15,10 @@ data = pd.read_csv("data/journal_pone_0169490_s010.csv")
 "cvltlongdelaycuedrecallstandardscore_6mo", "rs4680", "rs6277", "rs3219119", "rs11604671", "rs4938016", "rs1800497"
 """
 
-data = data[["ptsd_6mo", "marshall", "rotterdam"]]
+data = data[["gose_overallscore6m", "marshall", "rotterdam", "ct_intracranial_final", "skullfx", "skullbasefx",
+"facialfx", "edh_final", "sdh_final", "sah_final", "contusion_final", "midlineshift_final", "cisterncomp_final"]]
 
-predict = "ptsd_6mo"
+predict = "gose_overallscore6m"
 
 data = data.dropna(how="any")
 
@@ -36,7 +37,7 @@ for n in range(iter):
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.2)
 
 
-    clf = svm.SVC(kernel="linear", degree = 3)
+    clf = svm.SVC(kernel="linear ", degree = 3, class_weight = "balanced")
     clf.fit(x_train, y_train)
 
     y_pred = clf.predict(x_test)
