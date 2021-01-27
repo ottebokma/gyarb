@@ -5,6 +5,7 @@
 *.bbl
 *.bcf
 *.blg
+*.dvi
 *.log
 *.pdf
 *.toc
