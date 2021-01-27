@@ -4,6 +4,7 @@
 *.aux
 *.bbl
 *.bcf
+*.blg
 *.log
 *.pdf
 *.toc
