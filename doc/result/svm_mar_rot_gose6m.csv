@@ -1,0 +1,7 @@
+kernel, class weight, score
+linear, balanced, 0.2638755020080333
+linear, 1, 0.3180361445783221 (classified as 1, 6 & 8)
+rbf, balanced, 0.20736144578313076
+rbf, 1, 0.3082730923694867
+poly, balanced, 0.2870321285140618 (only 1, 6 & 7)
+poly, 1, 0.3128232931726991 (only 1, 5 & 8)
