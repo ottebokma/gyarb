@@ -1,7 +1,0 @@
-kernel, class weight, score
-linear, balanced, 0.10045000000000033
-linear, 1, 0.2841444444444458, only classifies as 7 & 8
-rbf, balanced, 0.13670555555555544
-rbf, 1, 0.29928888888889, only classifies as 7 & 8
-poly, balanced, 0.1332555555555554
-poly, 1, 0.2865888888888901
