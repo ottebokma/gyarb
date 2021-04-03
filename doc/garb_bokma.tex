@@ -1,4 +1,3 @@
-
 % Master LaTex file for gyarb
 
 % Shortcuts
@@ -15,60 +14,166 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{csvsimple}
+\usepackage[toc, acronym]{glossaries}
 
 % settings
 \addbibresource{garb_bibl/garb_bibl.bib}
 
 % title
-\title{Gymnasiearbete {\LaTeX} dokument}
+\title{Predicting long term effects if TBI using machine learning}
 \author{Otte Bokma}
 
+% glossary
+\makeglossaries
+\newglossaryentry{drd2}
+{
+  name = Gene dopamine receptor D2,
+  description = {DRD2 is a gene thet codes the dopamine receptor D2 that is the target for a variety of psychotrpic agents\cite{DRD2SNPedia}}
+}
+\newglossaryentry{ankk1}
+{
+  name = Gene ankyrin repeat and kinase domain containing 1,
+  description = {ANKK1 is a gene that codes for the ANKK1 enzyme \cite{ANKK12020}}
+}
+\newglossaryentry{COMT}
+{
+  name = Gene catechol-O-methyltransferase gene,
+  description = {The COMT gene is a gene in which variations affect dopamine levels in the prefrontal cortex\cite{comtsnpedia}. The gene codes for catechol-O-Methyltransferase, an enzyme that breaks down dopamine in the prefrontal cortex\cite{Rs4680snpedia}.}
+}
+\newglossaryentry{TBI}
+{
+  name = Traumatic Brain Injury,
+  description = {Brain injury cause by trauma to the head},
+  plural= traumatic brain injuries
+}
+\newglossaryentry{GOSE}
+{
+  name = Extended Glasgow Outcome Scale,
+  description = {Method for classifying outcome of traumatic brain injury}
+}
+\newglossaryentry{bc}
+{
+  name = basal/cerebral/subarachnoid cistern,
+  description = {Space formed by openings between the \gls{pm} and \gls{am} that are filled with \gls{csf}\cite{SubarachnoidCisterns2020}\cite{CerebralCisternsWRadiology2020}}
+}
+\newglossaryentry{csf}
+{
+  name = cerebrospinal fluid,
+  description = {Clear, colorless fluid surrounding the brain and spinal chord acting as a cushing and buffer for both mechanical and immunological protection of the brain and spine\cite{CerebrospinalFluid2021}}
+}
+\newglossaryentry{men}
+{
+  name = meninx,
+  description = {the meninges are three membranes enveloping the brain ans spinal chord. In mammals consisting of the \gls{dm}, \gls{am} and \gls{pm}\cite{Meninges2021}}
+  plural = meninges
+}
+\newglossaryentry{am}
+{
+  name = arachnoid mater,
+  description = {A membrane which along with the \gls{dm} and pia mater cover and protect the brain and spinal chord\cite{ArachnoidMater2021}}
+}
+\newglossaryentry{dm}
+{
+  name = dura mater,
+  description = {A thick membrane of dense irregular connective tissue surrounding the brain and spinal chord\cite{DuraMater2021}}
+}
+\newglossaryentry{pm}
+{
+  name = pia mater,
+  description = {The innermost layer of the \glspl{men}\cite{PiaMater2021}}
+}
+\newglossaryentry{bv}
+{
+  name = bridging vein,
+  description = {Veins in the meninges that go through the \gls{dm} and empty into the \glspl{dvs}\cite{BridgingVein2020}}
+}
+\newglossaryentry{dvs}
+{
+  name = dural venous sinus,
+  description = {venous channels between the meninges and endosteum\cite{DuralVenousSinuses2020}},
+  plural = dural venous sinuses
+}
+\newglossaryentry{mma}
+{
+  name = middle meningeal artery,
+  description = {The largest of three (paired) arteries that supply the \gls{men} with blood\cite{MiddleMeningealArtery2021}},
+}
+\newglossaryentry{susp}
+{
+  name = subarachnoid space,
+  description = {Area between the \gls{am} and the \gls{pm} surrounding the brain\cite{jonesSubarachnoidSpaceRadiology}}
+}
+\newglossaryentry{ca}
+{
+  name = cerebral aneurysm,
+  description = {Weakness in the wall of a cerebral artery or vein causing dilation of the blood vessels\cite{IntracranialAneurysm2021}}
+}
+\newglossaryentry{bh}
+{
+  name = brain herniation,
+  description = {An effect of high pressure within the skull that puts high pressure on parts of the brain which leads to insufficient blood supply to parts of the brain as blood vessels are constricted. The cause is that a part of the brain is pushed across structures in the skull. Brain herniation is often fatal. \cite{BrainHerniation2020}}
+}
+\newglossaryentry{icp}
+{
+  name = intracranial pressure,
+  description = {Pressure inside the skull exerted by fluids\cite{IntracranialPressure2021}}
+}
+\newglossaryentry{hc}
+{
+  name = hydrocephalus,
+  description = {A contidion that causes accumulation of \gls{csf} in the brain that often causes increased \gls{icp}\cite{Hydrocephalus2021}}
+}
+\newacronym{ptsd}{PTSD}{post traumatic stress disorder}
+\newacronym{tsah}{tSAH}{traumatic subarachnoid hemorrhage}
+\newacronym{snp}{SNP}{single nucleotide plymorphism}
+\newacronym{comt}{COMT}{catechol-O-methyltransferase}
+\newacronym{sah}{SAH}{subarachnoid hemorrhage}
+\newacronym{sh}{SH}{subdural hematoma}
+\newacronym{mmc}{MMC}{maximal margin classifier}
+\newacronym{svc}{SVC}{support vector classifier}
+\newacronym{svm}{SVM}{support vector machine}
+\newacronym{rbf}{RBF}{radial basis function kernel}
+\newacronym{tbi}{TBI}{traumatic brain injury}
+\newacronym{gose}{GOSE}{extended glasgow outcome scale}
+\newacronym{ct}{CT}{computed tomography}
+\newacronym{cns}{CNS}{central nervous system}
 % document
 \begin{document}
 
 \begin{titlepage}
-
-  \begin{center}
-    \huge{Predicting long term effects of TBI using machine learning}
-    \\[1cm]
-    \large{Using agglomerative clustering as a machine learning method to try to classify long term effects of traumatic brain injury}
-  \end{center}
+\maketitle
 \end{titlepage}
 
 \section*{Sammanfattning}
 
 \subsection*{Bakgrund}
 
-Hjärnskakningar är skador som är mer eller mindre vanliga beroende på en persons dagliga aktiviteter. De framkommer framför allt bland idrottare inom vissa sporter, emepelvis boxning, amerikansk fotboll och ishockey. Hjänskakningar är även en relativt vanlig skada vid trafikolyckor (whiplash). Det finns dock väldigt många olika former av hjänskakningar och symptomen varierar på både lång och kort sikt väldigt mycket mellan fallen. Att förutsäga de långvariga symptomen kan vara väldigt svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.\\
+Hjärnskakningar är relativt vanliga skador och framkommer framför allt bland idrottare inom vissa sporter, emepelvis ishockey. Det finns dock olika former av hjänskakningar och symptomen varierar på både lång och kort sikt mellan fallen. Att förutsäga de långvariga symptomen kan vara svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.\\
 \\
-Artificiell intelligens är något som används väldigt mycket i nuläget för en mängd olika saker. Artificiell intelligens har visat sig kunna användas väldigt effektivt för bland annat denna typ av uppgift, att identifiera eller förutsäga något utifrån olika variabler. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning utifrån de kortvariga symptomen.
+Maskininlärning har visat sig kunna användas effektivt för att identifiera eller förutsäga något utifrån olika variabler. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning skador en person fått.
 
-\subsection*{Metod och Resultat}
-
-\subsection*{Slutsats}
+\subsection*{Metod och Slutsats}
+Maskininlärningsmetoden som användes var en så kallad \gls{svm}. Den kördes med olika kernel funktioner vilka ändrar hur algoritmed delar in datan i klasser.\\
+\\
+Rotterdam och Marshall CT score kunde förutsägas någorlunda tillförlitligt med en \gls{svm} och patienters skador som faktorer. 6 månaders \gls{ptsd} och \gls{gose} poäng för patientens resultat kunde inte förutsägas tillförlitligt. Varken med Marshall och Rotterdam CT score som faktorer eller tillsammans med genetiska faktorer.
 
 \section*{Abstract}
 
 \subsection*{Background}
 
-Traumatic Brain injury (TBI) is a condition with varying presence depending on a persons daily activities. Above all TBI shows among athletes of some sports, such as boxing, american football and icehockey. TBI is also a relatively common injury in traffic accidents(, often in connection with a whiplash type injury). There are many different types of TBI and the sypmtoms can vary widely in both long term and short term. To predict the long term effects of TBI can therefore be very hard. Som people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.\\
+\gls{tbi} is a relatively common condition, especially among athletes of some sports, such icehockey. There are different types of \gls{tbi} and the sypmtoms can vary in both long term and short term. To predict the long term effects of \gls{tbi} can therefore be hard. Some people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.\\
 \\
-Nowadays machine learning is used widely and has many different kinds of application. Machine learning has been shown to be very suitable for this type of application in a lot of instances, to identify or pedict something based on a set of variables. Thus it could be conceivable that one could to at least some extent identify possible long term effects based on the short term symptoms of a TBI patient using machine learning.\\
-\\
-*
-Traumatic brain injury (TBI) is a condition that can be quite hard to diagnose and even if it is diagnosed the long term effects and symptoms can be hard to identify. Machine learning and artificial intelligence has in recent times gained popularity as is gives a way of identifying and predicting things that humans can not always do. As for TBI there is a lot of data to be collected about a patients health status at the time of being examined. This data is unfortunately quite hard for humans to interpret. Using machine learning to interpret this data is a great opportunity to harness the power of data classification that is machine learning.
-*
+Machine learning has been shown to be suitable for this type of application, to identify or pedict something based on a set of variables. Thus it could be conceivable that it might be possible to identify possible long term effects based on a \gls{tbi} patients injuries using machine learning.
 
-\subsection*{Method and Findings}
-The type of machine learning algorith used is a support vector machine (SVM), a type of approach developed in the 1990s. SVMs are shown to perform well in many different settings and are considered to be one of the best classifiers to use without doing considerable optimization for a specific classification problem.\\
+\subsection*{Method and Conclusion}
+The type of machine learning algorith used is a \gls{svm}. It was run on several different kernel functions which change how the algorithm divides data into classes.\\
 \\
-The classification was conducted by separating data values into features (used for predicting the label) and labels (predicted using features). The features and labels are then divided into training data and test data. In this case the training data consists of 80\% of all data and the test data consists of 20\%. The training data is what the algorithm uses to make a model of a function by which is considers the data to be separable, then this model is tested on the test data and scored by the precentile of correct  classifications.\\
-\\
-The separation of data into training and test data is done for each iteration of running the algorithm and each time the datapoints are separated the datapoints are used for each group are randomize. Thus the data used for training and prediction is not the same every time which means that also the results vary for each iteration of running the algorithm. To make the results more reliable the program runs 3000 iterations for the division of the data, and the algorithm. The score for each iteration is calculated and added to a variable, after which the total sum is divided by the number of iterations to get the average score.\\
-\\
-Results from a few of the iterations are also analyzed manually to see what kind of predictions the algorithm makes. A great part of the label classes are concentrated to just one or two of the classes, meaning that the algorithm can get a score that is quite high by just classifying all labels into one or two classes.
+Rotterdam and Marshall \gls{ct} scores could be somewhat reliably predicted using a \gls{svm} and injuries as factors. The 6 month \gls{gose} and \gls{ptsd} scores for patient outcome could not be reliably predicted. Neither using the Marshall and Rotterdam CT scores on their own or with genetic factors.
+\section*{Restrictions}
+The focus of the study lies in trying to use a \gls{svm} to predict the long term effects of \gls{tbi}. Therefore some restrictions have to be made regarding the maths and algorithms behind the \gls{svm} as explainging of it lies beyond the scope of this study.
 
-\subsection*{Conclusion}
+\section*{Keywords}
+Support Vector Machine, Brain Injury, Machine learning
 
 \newpage
 \tableofcontents
@@ -76,51 +181,118 @@ Results from a few of the iterations are also analyzed manually to see what kind
 \section{Introduction}
 
 \subsection{Purpose}
-
-\subsection{``Frågeställning''}
+The purpose of the *study/article* is to try to answer the following questions:
 
 \begin{enumerate}
   \item{How accurately can the Marshall and Rotterdam classifications be predicted with data of the injuries a patient has sufferd.}
-  \item{Can a correlation between genetic factors and patient outcome be found using machine learning(GOSE, PTSD)}
-  \item{How well do the Marshall and Rotterdam classifications predict the score of the Extended Glasgow Outcome Scale (GOSE)}
+  \item{Can a correlation between genetic factors and patient outcome be found using machine learning(\gls{gose}, \gls{ptsd}}
+  \item{How well do the Marshall and Rotterdam classifications predict the score of the Extended Glasgow Outcome Scale}
 \end{enumerate}
 
 \section{Method}
 \subsection{Support Vector Machines}
-The support vector machine, or SVM, is a generalization of a classifier called the \textit{maximal margin classifier}. This classifier however, can not be applied to most datasets as it requires classes to be separable by a linear boundary. With the use of the \textit{support vector classifier}, which is an extension of the of the maximalmargin classifier, SVMs become applicable to more datasets. The \textit{support vector machine} is a further extension of the \textit{support vector classifier} that accomomodates for class boundaries that are non-linear. Even further extensions can be made to the \textit{support vector machine} to make it applicable to more than two classes.\cite{jamesSupportVectorMachines}
-
-It is important to distinguish between the \textit{maximal margin classifier}, \textit{support vector classifier} and \textit{support vector machine}, as not to confuse them with eachother.\cite{jamesSupportVectorMachines}\\
+The support vector machine, or SVM, is a generalization of a classifier called the \textit{maximal margin classifier}. This classifier however, can not be applied to most datasets as it requires classes to be separable by a linear boundary. With the use of the \textit{support vector classifier}, which is an extension of the of the maximalmargin classifier, SVMs become applicable to more datasets. The \textit{support vector machine} is a further extension of the \textit{support vector classifier} that accomomodates for class boundaries that are non-linear. Even further extensions can be made to the \textit{support vector machine} to make it applicable to more than two classes.\cite{jamesSupportVectorMachines}\\
 \\
-\subsubsection{Maximal Margin Classifier}
-A classifier that divides data into two classes with a linear line: The the maximum margin.
-
-\subsubsection{Support Vector Classifiers}
-
-\subsubsection{Support Vector Machines}
-
-\subsubsection{SVMs with More than two Classes}
+It is important to distinguish between the \textit{maximal margin classifier}, \textit{support vector classifier} and \textit{support vector machine}, as not to confuse them with eachother.\cite{jamesSupportVectorMachines}
 
 \subsubsection{Kernels}
-Kernels are similarity functions. A similarity functions objective is to calculate the similarity between objects. Using a kernel means that we can add dimensions so that the data gets separable into classes. The use of a kernel implies the use of a kernel function, that enables the use of high-dimensional space without needing to compute the coordinates of the thata in that space. Instead it calculates the inner (dot) product for all pairs of images of data.\\
+Kernels are similarity functions. A similarity functions objective is to calculate the similarity between objects. Using a kernel means that we can add dimensions so that the data gets separable into classes. The use of a kernel implies the use of a kernel function, that enables the use of high-dimensional space without needing to compute the coordinates of the data in that space. Instead it calculates the inner (dot) product for all pairs of images of data.\cite{KernelMethod2021}\\
 \\
-The type of kernel used defines what kind of function is used to make the model for separating the data into different classes.\\
-\\
-Image\\
+The type of kernel used defines what kind of function is used to make the model for separating the data into different classes.\cite{SVMKernelsScikitlearn24}\\
 \\
 \large{Linear kernel}\\
 A linear kernel
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/kernel_linear.png}
+  \caption{Figure showing a linear kernel}
+\end{figure}
+
 \large{Radial basis function kernel}\\
+A \gls{rbf}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/kernel_rbf.png}
+  \caption{Figure showing a radial basis function kernel}
+\end{figure}
 
 \large{Polynomial kernels}
+A polynomial kernel
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/kernel_poly.png}
+  \caption{Figure showing a polynomial kernel}
+\end{figure}
+
+\subsubsection{Maximal Margin Classifier}
+The \gls{mmc} is a classifier that divides data into two classes with a linear plane: The the maximum margin. That is the separating hyperplane that has the greatest distance (margin) to the training observations. Making the margin as large as large as possible does not ensure that the classifying plane is the most correct but it has the greatest chance of having a large margin to test data if the training data reflects the test data well.\cite{jamesSupportVectorMachines}\cite{HyperplaneSeparationTheorem2021}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_2.pdf}
+  \caption{Left: Three possible hyperplanes for dividing two classes of observations. Right: A hyperplane separating two calsses and grid illustrating which class observations would be assigned.}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_3.pdf}
+  \caption{A maximal margin hyperplane, shown as a solid line, and the margin which is the distance between the solid and dashed lines.}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_4.pdf}
+  \caption{Two classes of observations that are not separable by a hyperlane, meaning that a \gls{mmc} cannot be used}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_5.pdf}
+  \caption{Left: Two calsses separatep by a maximal marhgin hyperplane. Right: A new maximal margin hyperplane (solid line) and the old maximal margin hyperplane (dashed line) illustrating the effect a single observation can have when using the \gls{mmc}.}
+\end{figure}
+
+\subsubsection{Support Vector Classifier}
+The \gls{svc}, also called the \textit{soft margin classifier}, is based on the \gls{mmc} but instead of making a hard margin it has a \"soft\" margin. This means that the \gls{svc} may allow some of the training observations to not only violate the margin but also the separating hyperplane in order to classify \textit{most} of the training data better. The soft margin of the \gls{svc} allows the classification of data that are not strictly separable by a hyperplane. It also means that a single observation in the training data has less impact on the separating hyperplane, which in some cases may cause an \gls{mmc} to make a less accurate classification for the majority of data.\cite{jamesSupportVectorMachines}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_7.pdf}
+  \caption{A \gls{svc} used for classifying data. In each case the tolerance of observations being on the wrong side of the margin and hyperplane is different, resulting in different classifying hyperplanes.}
+\end{figure}
+
+\subsubsection{Support Vector Machine}
+The \gls{svm} is and extension to the \gls{svc} with the use of kernels. The \gls{svm} enlarges the feature space in order to make non-linear division boundaries possible between classes, which the \gls{svc} cannot do as shown in figure *. The type of kernel used with a \gls{svm}\cite{KernelMethod2021} determines what kind of function is used for the separation of classes\cite{SVMKernelsScikitlearn24}.\cite{jamesSupportVectorMachines}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_8.pdf}
+  \caption{Left: Observations of two classes not divisible by a linear boundary. Right: The \gls{svc} trying to find a linear boundary between the two classes.}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/9_9.pdf}
+  \caption{Left: A \gls{svm} with a polynomial kernel applied to non-linear data. Right: A \gls{svm} with a \gls{rbf} kernel applied to non-linear data.}
+\end{figure}
+
+\subsubsection{SVMs with More than two Classes}
+\glspl{svm} are in themselves not capable of separating more than two classes which necessitates the use of a way to extend \glspl{svm} to K-cases. The two most used and well-known methods are the \textit{one-versus-one} and \textit{one-versus-all}. In the case of this *study* the \textit{one-versus-one} approach is used for multi-class classifications\cite{jamesSupportVectorMachines}.\\
+\\
+\textbf{\textit{One-Versus-one Classification}}\\
+The \textit{one-versus-one} approach for multi-class classification constructs $\binom{K}{2}$ \glspl{svm}, where each \gls{svm} compares two classes with eachother. Thus each class is compared to all other classes individually.\cite{jamesSupportVectorMachines}\\
+\\
+\textbf{\textit{One-Versus-all Classification}}
+Using the \textit{one-versus-all} method, for K > 2, fits K \glspl{svm}. Each \gls{svm} is then compared to the remaining K - 1 classes.\cite{jamesSupportVectorMachines}
 \section{Score}
 
-\subsection{Marshall CT Score}
-The Marshall classification of traumatic brain injury, or Marshall CT score, is a metric used for classification of traumatic brain injury. The classification system is a CT scan derived metric that has shown to predict patient outcome in cases og traumatic brain injury.\cite{gaillardMarshallClassificationTraumatic}\\
+\subsection{Marshall \gls{ct} Score}
+The Marshall classification of traumatic brain injury, or Marshall \gls{ct} score, is a metric used for classification of traumatic brain injury. The classification system is a \gls{ct} scan derived metric that has shown to predict patient outcome in cases of traumatic brain injury.\cite{gaillardMarshallClassificationTraumatic}\\
 \\
 The Marshall system divides patients into six categories.
-Patients are divided into six categories (I to VI) by the Marhall system. Categorization is done on the basis of a non-contrast CT scan of the brain. The severity increases with the numbers, VI being the most severe, and thus the higher numbers have worse prognosis and survival. The system focuses mostly on two features: Degree of swelling, which is determined by midline shift and/or compression of basal cisterns, and the presence and size of contusions/haemmorages that are referred to as ``high or mixed density lesions'' in the classification.\cite{gaillardMarshallClassificationTraumatic}\\
+Patients are divided into six categories (I to VI) by the Marhall system. Categorization is done on the basis of a non-contrast \gls{ct} scan of the brain. The severity increases with the numbers, VI being the most severe, and thus the higher numbers have worse prognosis and survival. The system focuses mostly on two features: Degree of swelling, which is determined by midline shift and/or compression of basal cisterns, and the presence and size of contusions/haemmorages that are referred to as ``high or mixed density lesions'' in the classification.\cite{gaillardMarshallClassificationTraumatic}\\
 \\
 The scored elements in the Marshall classification are:
 
@@ -130,7 +302,7 @@ The scored elements in the Marshall classification are:
 \item{presence and size of contusions/heaemorraghes}
 \end{itemize}
 
-The classifications of the Marshall CT score are the following:
+The classifications of the Marshall \gls{ct} score are the following:
 
 \begin{enumerate}
 \item{Diffuse Injury I}
@@ -151,7 +323,7 @@ The classifications of the Marshall CT score are the following:
   \end{itemize}
 \item{Diffuse Injury IV}
   \begin{itemize}
-    \item{midline shift >5 mm}
+    \item{midline shift $>5 mm$}
     \item{no high or mixed density lesions $>25cm^3$}
   \end{itemize}
 \item{Diffuse Injury V}
@@ -165,8 +337,8 @@ The classifications of the Marshall CT score are the following:
   \end{itemize}
 \end{enumerate}
 
-\subsection{Rotterdam CT Score}
-The Rotterdam CT score of traumatic brain injury is a classification purposed for improving prognostic evalutaion for patients admitted with acute trumatic brain injuries. The Rotterdam system is more recent than the Marshall classification of traumatic brain injury which tries to address some of the limitations that the older Marshall system has. Instead of having three independently scored elements the Rotterdam system has four, and one of the elements is slightly different from the Marshall system.\\
+\subsection{Rotterdam \gls{ct} Score}
+The Rotterdam \gls{ct} score of traumatic brain injury is a classification purposed for improving prognostic evalutaion for patients admitted with acute trumatic brain injuries. The Rotterdam system is more recent than the Marshall classification of traumatic brain injury which tries to address some of the limitations that the older Marshall system has. Instead of having three independently scored elements the Rotterdam system has four, and one of the elements is slightly different from the Marshall system.\\
 \\
 The scored elements in the Rotterdam classification are:
 
@@ -177,7 +349,7 @@ The scored elements in the Rotterdam classification are:
 \item{intraventricular and/or subarachnoid blood}
 \end{itemize}
 
-The classification of the Rotterdam CT score is scored by the following system:
+The classification of the Rotterdam \gls{ct} score is scored by the following system:
 
 \begin{itemize}
 \item{basal cisterns}
@@ -196,7 +368,7 @@ The classification of the Rotterdam CT score is scored by the following system:
     \item{0: present}
     \item{1: absent}
   \end{itemize}
-\item{intraventricular blood or traumatic SAH}
+\item{intraventricular blood or \gls{tsah}}
   \begin{itemize}
     \item{0: absent}
     \item{1: present}
@@ -204,7 +376,7 @@ The classification of the Rotterdam CT score is scored by the following system:
 \end{itemize}
 The final score is the sum of the scores for each individually assessed element + 1.\\
 \\
-The Rotterdam CT score has probablility of mortality at six months post-injury for each score.\\
+The Rotterdam \gls{ct} score has probablility of mortality at six months post-injury for each score.\\
 \begin{enumerate}
   \item{0\%}
   \item{7\%}
@@ -215,7 +387,7 @@ The Rotterdam CT score has probablility of mortality at six months post-injury f
 \end{enumerate}
 
 \subsection{Extended Glasgow Outcome Scale}
-The GOS-E, or GOSE, is an extension developed to the original Glasgow outcome scale (GOS) in 1981 to address some of its limitations. The original GOS has five categories, these are extended to eight in the GOS-E. In 1998 a questionnare with guidelines was provided to improve the reliability of the GOS ans GOS-E ratings\cite{GOSEExtendedGlasgow}.\cite{ExtendedGlasgowOutcome}\\
+The GOS-E, or \gls{gose}, is an extension developed to the original Glasgow outcome scale (GOS) in 1981 to address some of its limitations. The original GOS has five categories, these are extended to eight in the GOS-E. In 1998 a questionnare with guidelines was provided to improve the reliability of the GOS ans GOS-E ratings\cite{GOSEExtendedGlasgow}.\cite{ExtendedGlasgowOutcome}\\
 \\
 The categories of the GOS-E are:
 \begin{itemize}
@@ -235,22 +407,22 @@ The categories of the GOS-E are:
 
 \subsection{Injuries}
 
-\subsubsection{CT Brain Pathology}
-Brain pathology is disease in the brain, CT brain pathology is the study of brain diseases which can be found by compudet tomography (CT).
-The data indicates whether any brain pathology could be indicated via a CT scan.
+\subsubsection{\gls{ct} Brain Pathology}
+Brain pathology is disease in the brain, \gls{ct} brain pathology is the study of brain diseases which can be found by a \gls{ct} scan.
+The data indicates whether any brain pathology could be indicated via a \gls{ct} scan.
 
-\subsubsection{CT Skull Fracture}
+\subsubsection{\gls{ct} Skull Fracture}
 The cranial portion of the skulle consists of eight bones. A skull fracture is a fracture or break in any one of these bones. A skull fracture may cause underlying structures such as membranes, blood vessels and brain to be damaged.\cite{SkullFracture2020}\\
 \\
-If no part of skull bone causes damage to tissue around it a skull fracture in itself is not that significant. Skull fractures can occur without there being any other physical or neurological damage. It is however very indicative of a significant amount of force applied to the head if there is a skull fracture in healthy bone. When a skull fracture is caused to healthy bone it isvery likely that this person has suffered a concussion, wether with or without loss of conciousness.\cite{SkullFracture2020}\\
+If no part of skull bone causes damage to tissue around it a skull fracture in itself is not that significant. Skull fractures can occur without there being any other physical or neurological damage. It is however indicative of a significant amount of force applied to the head if there is a skull fracture in healthy bone. When a skull fracture is caused to healthy bone it is likely that this person has suffered a concussion, wether with or without loss of conciousness.\cite{SkullFracture2020}\\
 \\
 Compound fractures
 (major) Types of skull fractures:
 
-\subsubsection{CT Skull Base Fracture}
-Skull base fractures, often referred to as balas or basilar skull fractures, is the break of a bone in the base of the skull. The bones the break can occur in are the temporal bone, occipital bone, sphenoid bone, frontal bone, or ethmoid bone. Depending on where the fracture has occured thefractures are divided into anterior, central or posterior fractures. For a skull base fracture to occur it generally requires a significant amount of trauma. The diagnosis of basal skull fractures is mostly done by a CT scan.\cite{BasilarSkullFracture2021}\\
+\subsubsection{\gls{ct} Skull Base Fracture}
+Skull base fractures, often referred to as balas or basilar skull fractures, is the break of a bone in the base of the skull. The bones the break can occur in are the temporal bone, occipital bone, sphenoid bone, frontal bone, or ethmoid bone. Depending on where the fracture has occured thefractures are divided into anterior, central or posterior fractures. For a skull base fracture to occur it generally requires a significant amount of trauma. The diagnosis of basal skull fractures is mostly done by a \gls{ct} scan.\cite{BasilarSkullFracture2021}\\
 \\
-Symptoms that can be caused by basal skull fractures include bruising behind the ears, bruising around the eyes, blood behind the ear drum, and cerebrospinal fluid (CSF) leak, which occurs in about 20\% of cases, that may cause fluid to leak from nose or ears. Other possible effects are cranial nerve or blood vessel injury and about 14\% of cases cause in meningitis, which is the inflammation of the protective membranes that cover the brain and spial chord.\cite{BasilarSkullFracture2021} *WRITE ABOUT MENINGITIS SYMPTOMS*\\
+Symptoms that can be caused by basal skull fractures include bruising behind the ears, bruising around the eyes, blood behind the ear drum, and \gls{csf} leak, which occurs in about 20\% of cases, that may cause fluid to leak from nose or ears. Other possible effects are cranial nerve or blood vessel injury and about 14\% of cases cause in meningitis, which is the inflammation of the protective membranes that cover the brain and spial chord.\cite{BasilarSkullFracture2021} *WRITE ABOUT MENINGITIS SYMPTOMS*\\
 \\
 \begin{figure}[ht]
   \centering
@@ -258,52 +430,150 @@ Symptoms that can be caused by basal skull fractures include bruising behind the
   \caption{Figure showing what bones may be involved in a basal skull fracture}
 \end{figure}
 
-\subsubsection{CT Facial Fracture}
-\subsubsection{CT Epidural Hematoma}
-\subsubsection{CT Subdural Hematoma}
-\subsubsection{CT Subarachnoid Hemorrhage}
-\subsubsection{CT Contusion}
-\subsubsection{CT Midline Shift}
-\subsubsection{CT Cisternal Compression}
+\subsubsection{Facial Fracture}
+Facial fractures are fractures caused to a facial bone and are most commonly caused by blunt or penetrating trauma\cite{ibrahimFacialFracturesRadiology}. As some of the facial bones are close to the brain, fractures in those bones may cause complications in the brain and \gls{cns}.\cite{FacialFracturesTypes}
+
+\subsubsection{Epidural Hematoma}
+An epidural hematoma is a bleed between the \gls{dm} and the skull, typically casued by an injury that causes a break in the temporal bone and bleeding from the \gls{mma}, but also sometimes caused by bleeding disorders or malformation of blood vessels. Symptoms that may be cause by an epidural hematoma include headaches, confusion, votiming, inability to move some body parts and seizures. Epidural hematomas occur in about 1-4\% of head injuries and 15\% of fatal head injuries. Epidural hematomas are generally treated by surgery. If an epidural hematoma is left untreated it usually results in death.\cite{EpiduralHematoma2021}\\
+\\
+When receiving an injuriy that causes an epidural hematoma it is often followed by a loss of conciousness, then a short regaining of conciousness, and then loss of conciousness again. If this lucid period occurs the prognosis for the paitent is better than if the patient does not regain conciousness. If the hematoma is arterial the progress is usually rapid and if venous it is slower. The size of the hematoma at the time of surgery also effects the outcome.\cite{EpiduralHematoma2021}
+
+\subsubsection{Subdural Hematoma}
+\glspl{sh} are a bleeding where blood collects between the \gls{dm} and \gls{am} that surround the brain. Generally it is the results from tears in \gls{bv}. \gls{sh}s can cause the pressure in the skull to increase which can cause damage to brain tissue.\cite{SubduralHematoma2021}\\
+\\
+Chronic \glspl{sh} are bleedings that slowly increase the size of the hematoma with recurret bleeding that may be caused by a variety of complications\cite{yadavChronicSubduralHematoma2016}. Chronic \glspl{sh} have a better prognosis than acute \glspl{sh} if they are treated. Chronic \glspl{sh} can however be hard to detect as the symptoms are not alway clear, especially with older patients where other causes for their symptoms may be suspected\cite{yadavChronicSubduralHematoma2016}.\cite{SubduralHematoma2021}\\
+\\
+Acute \gls{sh} is generally life threatening as it puts pressure on blood vessels that supply the brain with blood so that the brain is not supplied with enough blood. This can then lead to death of brain cells. The subdural hematoma grows larger because as the intracranial pressure increases blood is pushed into the \glspl{dvs} which causes the dural venous pressure to rise increasing the bleeding from the ruptured \glspl{bv}. Only when the pressure of the hematoma and the inctracranial pressure become equal does the growth of the \gls{sh} stop.\cite{SubduralHematoma2021}
+
+\subsubsection{Subarachnoid Hemorrhage}
+\gls{sah} is the bleeding into the \gls{susp}. \gls{sah} often occurs as the result of a head injury but can also occur spontaneously from a \gls{ca} that has ruptured. Symptoms caused by \gls{sah} may include severe headaches, vomiting, decreased conciousness levels, fever, seizures, neck pain and/or stiffness.\cite{SubarachnoidHemorrhage2021}\\
+\\
+Sponataneous \gls{sah} affects about one per 10 000 people per year. Many underlying health factors affect the prominence of spontaneous \gls{sah} and it becomes more common with age. About half of the poeple with \gls{sah} due to an aneurysm die within 30 days of the hemoorhage and a third of those who survive have porblems later in life as the result of the \gls{sah}.\cite{SubarachnoidHemorrhage2021}\\
+\\
+\Gls{tsah} is a common injury that occurs in about 11-60\% of \gls{tbi} cases\cite{knipeTraumaticSubarachnoidHemorrhage}. \gls{tsah} however has a much lower mortality rate that spontaneous \gls{sah} and only about 10\% have worsening of head injuries following a \gls{tsah}\cite{cooperManagementTraumaticSubarachnoid2019}. As \gls{tsah} is quite common in cases of \gls{tbi} it often occurs in addition to other forms of brain injury. In these cases the prognosis is worse but it is not clear if this is a result of the \gls{sah} orf if it just indicates a more severe brain injury.\cite{SubarachnoidHemorrhage2021}\\
+\\
+The long term effects of \gls{sah} are common. Long term sypmtoms may include fatigue and mood disturbances. Even for thos that have made a good neurological recovery anxiety, depression, \gls{ptsd}, and cognitive impairments. In total about 46\% of those that have suffered a \gls{sah} get cognitive impairments that effect their quality of life.\cite{SubarachnoidHemorrhage2021}
+
+\subsubsection{Contusion}
+Cerebral contusions are a bruise of the brain tissue, and like other bruises are many microhemorrhages, that leak blood into the brain tissue. Cerebral contusions occur in 20-30\% of severe cases head injury but often heal on their own without any medical intervention. Cerebral contusions can however cause lowered mental function in the long term and in short term may cause \gls{bh}, a life threatening condition which requires promt measures to be taken\cite{BrainHerniation2020}.\cite{CerebralContusion2020}
+
+\subsubsection{Midline Shift}
+Midline shift is when the brain is moved from its center line. The finding of midline shift implies the risk of distortion of the brain stem which can cause serious harm. Midline shift is also commonly associated with high \gls{icp} which can be fatal, as it can cause crushing of brain tissue, shifts in brain structures, restrict blood supply to the brain, cause \gls{bh} and contribute to \gls{hc}\cite{IntracranialPressure2021}.\cite{MidlineShift2021}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=12cm]{graphics/skull_interior.jpeg}
+  \caption{The inside of the skull. There are many ridges which can cause injuries to the bran if it moves along them.}
+\end{figure}
+
+\subsubsection{Cisternal Compression}
+Cisternal compression refers to the compression or absence of \glspl{bc}, also called subarachnoid cisterns or cerebral cisterns. There has been shown to be a strong relation between patient outcome and the state of the \glspl{bc} with those having compressed basal cisterns having higher mortality rates than those with normal \glspl{bc} and even higher mortality rates for those with absent \glspl{bc}\cite{toutantAbsentCompressedBasal1984}\cite{kouvarellisRelationshipBasalCisterns2011}. Absence of \glspl{bc} meaning them having being obliterated\cite{kouvarellisRelationshipBasalCisterns2011}.
 
 \subsection{Genetic}
 
-\subsubsection{catechol-O-methyltransferase gene}
-The catechol-O-methyltransferase (COMT) gene is a gene which variations affect dopamine levels in the prefrontal cortex\cite{COMTSNPedia}. The gene codes for catechol-O-Methyltransferase, an enzyme that breaks down dopamine in the prefrontal cortex\cite{Rs4680SNPedia}.
 \subsubsection{rs4680}
-rs4680, also sometimesreferred to as Val158Met, Val108/158Met or G1947A, is a single-nucleotide polymorphism (SNP) in the COMT gene. The nucleotide substitution between A and G results in changing the amino acid at codon 158 from valine, for genotype G;G, to methionine, for genotype A;A. The A/Met allele makes a change in the enzyme which has been shown to have lower enzymatic activity (because of thermoinstability).\cite{Rs46802020}\\
+rs4680, sometimes also referred to as Val158Met, Val108/158Met or G1947A, is a \gls{snp} in the \gls{comt} gene. The nucleotide substitution between A and G results in changing the amino acid at codon 158 from valine, for genotype G;G, to methionine, for genotype A;A. The A/Met allele makes a change in the enzyme which has been shown to have lower enzymatic activity (because of thermoinstability).\cite{Rs46802020}\\
 \\
-The activity is supposedly only 25\% of the enzyme coded for in the case of the G/Val allele. The difference in levels of dopamine in the frontal cortex caused by the SNP is in some cases named the warrior/worrier hypothesis. People with the Met allele are described as ``worriers'' and considered to be more ``exploratory'', a description that is not defined in any exact way\cite{ExploratoryBehaviorOverview}, than people with the Val allele. The Val allele carriers are described as ``warriors'' and considered less ``exploratory''. Some more tangible differences that have been observed and are thought to be caused by the difference in dopamine levels are lower pain threshold, enhanced vulnerability to stress, and higher efficiency for processing information under most conditions for the Met allele, carriers having higher dopamine levels, and higher pain threshold, better stress resiliency, and a modest reduction in executive cognition performance under most conditions for the Val allele, carriers having lower dopamine levels.\cite{Rs4680SNPedia}
-\cite{Rs4680SNPedia}
+The activity is supposedly only 25\% of the enzyme coded for in the case of the G/Val allele. The difference in levels of dopamine in the frontal cortex caused by the \gls{snp} is in some cases named the warrior/worrier hypothesis. People with the Met allele are described as ``worriers'' and considered to be more ``exploratory'', a description that is not defined in any exact way\cite{ExploratoryBehaviorOverview}, than people with the Val allele. The Val allele carriers are described as ``warriors'' and considered less ``exploratory''. Some more tangible differences that have been observed and are thought to be caused by the difference in dopamine levels are lower pain threshold, enhanced vulnerability to stress, and higher efficiency for processing information under most conditions for the Met allele, carriers having higher dopamine levels, and higher pain threshold, better stress resiliency, and a modest reduction in executive cognition performance under most conditions for the Val allele, carriers having lower dopamine levels.\cite{Rs4680edia}
+\cite{Rs4680snpedia}
 
 \subsubsection{rs6277}
+rs6277 (957C>T, Pro319Pro) is an \gls{snp} in the \gls{drd2} gene\cite{Rs6277SNPedia}. It has been shown that there could be a significant association between susceptibility to PTSD and the rs6277 \gls{snp} with individuals having PTSD being more likely to carry the C allele\cite{voiseyDRD2Gene957C2009}.
 \subsubsection{rs3219119}
+The rs3219119 \gls{snp} has been shown to potentially be an indicator for the outcome in \gls{tbi} cases. It is however not the rs3219119 alone that impacts the outcome in \gls{tbi} as the \gls{snp} is closely associated with the rs3219090 \gls{snp} and the effects caused by variations in one are not independent from variations in the other.\cite{sarnaikInfluencePARP1Polymorphisms2010}
+
 \subsubsection{rs11604671}
+rs11604671 is a \gls{snp} in the \gls{ankk1} gene\cite{Rs11604671SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs4938016 and rs1800497 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
+
 \subsubsection{rs4938016}
+rs4938016 is a \gls{snp} in the \gls{ankk1} gene\cite{mcallisterSingleNucleotidePolymorphisms2008}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs11604671 and rs1800497 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
+
 \subsubsection{rs1800497}
+rs1800497 is a \gls{snp} in the \gls{drd2} gene\cite{Rs1800497SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs3219119 and rs4938016 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
+
+\section{Method}
+The type of machine learning algorith used is a \gls{svm}, which have been shown to perform well in many different settings and are considered to be one of the best classifiers to use without considerable optimization for a specific classification problem.\\
+\\
+The classification was conducted by separating data values into features (used for predicting the label) and labels (predicted using features). The features and labels are then divided into training data and test data. In this case the training data consists of 80\% of all data and the test data consists of 20\%. The training data is what the algorithm uses to make a model of a function by which is considers the data to be separable, then this model is tested on the test data and scored by the precentile of correct  classifications.\\
+\\
+The separation of data into training and test data is done for each iteration of running the algorithm and each time the datapoints are separated the datapoints are used for each group are randomize. Thus the data used for training and prediction is not the same every time which means that also the results vary for each iteration of running the algorithm. To make the results more reliable the program runs 3000 iterations for the division of the data, and the algorithm. The score for each iteration is calculated and added to a variable, after which the total sum is divided by the number of iterations to get the average score.\\
+\\
+Results from a few of the iterations are also analyzed manually to see what kind of predictions the algorithm makes. A great part of the label classes are concentrated to just one or two of the classes, meaning that the algorithm can get a score that is quite high by just classifying all labels into one or two classes.
 
 \section{Results}
 The support vector machine is a supervised learning method which means the data has to be split up into training and testing data. This split affects the results when the classification is socored. Using different training data means the classes will be different and thus it will classify the data differently depending on the training data. For this reason the accuracy of the function varies so 3000 iterations have been run for all the results, except where the number of iterations is stated.
-\subsection{Injury Factors}
-*Run results for SVM on 3 kernels, balanced \& unbalanced, predicting Marshall and Rotterdam CT scores. Run 3000/5000 iterations each time.*
-Initial result: Quite good, about 89\% right for Marhsall and about 70\% for Rotterdam, also many of those not being 1/2 => GOOD
 
-\subsection{Genetic Factors}
-*Run results for SVM on 3 kernels, balanced \& unbalanced, predicting GOSE and PTSD scores. Run 3000/5000 iterations each time.*
-Initial result:
+\subsection{Injury Factors}
+*Run results for SVM on 3 kernels, balanced \& unbalanced, predicting Marshall and Rotterdam \gls{ct} scores. Run 3000/5000 iterations each time.*
+Initial result: Quite good, about 89\% right for Marhsall and about 70\% for Rotterdam, also many of those not being 1/2 => GOOD\\
+\\
+\begin{center}
+  \Large{Clasification of Marshall score}\\
+  \csvautotabular{result/svm_inj_mar.csv}\\
+  \Large{Clasification of Rotterdam score}\\
+  \csvautotabular{result/svm_inj_rot.csv}
+\end{center}
+
+\subsection{Score Factors}
+Using the Marshall and Rotterdam \gls{ct} scores for predicting GOS-E score and PTSD 6 months after injury.\\
+\\
+\begin{center}
+  \Large{Classification of 6 month GOS-E}\\
+  \csvautotabular{result/svm_mar_rot_gose6m.csv}\\
+  \Large{Classification of 6 month PTSD}\\
+  \csvautotabular{result/svm_mar_rot_ptsd.csv}
+\end{center}
 
 \subsection{Combined Factors}
-*Run results for SVM on 3 kernels, balanced \& unbalanced, predicting Marshall and Rotterdam CT scores. Run 3000/5000 iterations each time.*
-Initial result: Running with both injuries and genetics as factors for the Rotterdam score the precentage actually increases a little, not much but it does seem to improve even though the number of observations decreases. For the Marshall score it does not seem to make any difference.
+Using the Marshall and Rotterdam \gls{ct} scores along with the genetic factors for predicting GOS-E score and PTSD 6 months after injury.\\
+\\
+\begin{center}
+  \Large{Classification of 6 month GOS-E}\\
+  \csvautotabular{result/svm_comb_gose6m.csv}\\
+  \Large{Classification of 6 month PTSD}\\
+  \csvautotabular{result/svm_comb_ptsd.csv}
+\end{center}
 
+\section{Conclusions}
+
+\begin{enumerate}
+  \item{The Marshall \gls{ct} score can be predicted with high accuracy with a SVM using injuries (see listed) as factors}
+  \item{The Rotterdam \gls{ct} score can be predicted with moderately high accuracy with a SVM using injuries (see listed) as factors}
+  \item{The 6 month GOS-E score is not reliably predicted with a SVM using the Rotterdam and Marshall \gls{ct} sores as factors}
+  \item{The 6 month PTSD is not reliably predicted with a SVM using the Rotterdam and Marshall \gls{ct} scores as factors}
+  \item{The 6 month GOS-E score is not reliably predicted with a SVM using both genetics and the Rotterdam and Marshall \gls{ct} scores as factors}
+  \item{The 6 month PTSD is not reliably predicted with a SVM using both genetics and the Rotterdam and Marshall \gls{ct} scores as factors}
+\end{enumerate}
 \section{Discussion}
+* from conclsion
+The Rotterdam and Marshall \gls{ct} scores could be somewhat reliably predicted using a SVM and injuries as factors. Even for these the scores were not great and there was quite a significant difference between the accuracy of predicting the two scores. The prediction of the Marshall score being around ten precentage points higher.*\\
+\\
+
 The classification choice problem:\\
-For classification of TBI it is intended to get a prediction of what class an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.\\
+For classification of \gls{tbi} it is intended to get a prediction of what class an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.\\
 \\
 The dataset that is used has a quite limited sample size. The number of samples being so low means that there is a low chance of there being great consistency to be found in the data. What also affects the results is an inherent flaw in the way the research has been conducted. As the intention of a program like this is to find patterns where we humans cannot find them it is important that the program get raw data about something. In this case the data has already been processed and interpreted by humans which means that the program only has access to data that is already processed by humans. If humans cannot, using their observations, with certainty say what has been damaged in the brain and what this will lead to the data that the humans collect will be flawed in this same way.\\
 \\
-To increase chances of success in a project like this it would be advised to use data that has in no way been interpreted by humans. Imaging of the brain is what would be most easily accessible and also seems to be the most relevant for this purpose. Then letting an artificial intelligence algorithm try to classify them into subgroups. Although even this method suffers from the classification choice problem.\\
+To increase chances of success in a project like this it would be advised to use data that has in no way been interpreted by humans. Imaging of the brain is what would be most easily accessible and also seems to be the most relevant for this purpose. Then letting an artificial intelligence algorithm try to classify them into subgroups. Although even this method suffers from the classification choice problem.
+
+\subsection{Classification of the Marshall and Rotterdam \gls{ct} scores}
+Classifying the Marshall score the SVM has an average accuracy between 86 and 88\%. This score can be considered high enough to give information of a patients Marshall score with some confidence.\\
 \\
+The fact that the score is rather high is not that suprising considering how the Marshall \gls{ct} score is determined. It is determined using midline shift and/or the compression of basal cisterns, and the presence and size of contusions or haemmorages. A lot of this information is also available to the SVM in the dataset which means the algorithm uses the data of the same injuries to determine the Marshall score as is used by humans to do the same. There is one difference though, which is that the data used for training the SVM has no information on the degree of midline shift or the degree of basal cistern compressions. The data only contains if a patient has midline shift or not and if it has basal cistern compressions or not.\\
+\\
+Even though the SVM scores quite high in classifying the Marshall \gls{ct} score it is less accurate for the higher scores. This is likely due to the fact that the dataset is quite small and that the amount of patients with more severe \gls{tbi} is even smaller. This makes it harder to make clear boundaries for the SVM. Another thing that might affect the accuracy of higher scores is the fact that those are more reliant on the degree of the different injuries used for classification and not merely if the injury has been observed or not.\\
+\\
+It is likely however that even if the higher scores rely more on the degree of injuries that the accuracy might be noticably higher if the dataset used would be larger.
+
+\subsection{Injury Factors}
+One of the major restrictions created by the data is the fact that a lot of the specifics for injuries are left out. Mostly just indicating if a particular injury was present or not. This makes it more difficult to predict outcome as there is no way of knowing to which extent this injury might have affected the patient. For examlpe the data states whether or not a patient has suffered midline shift but not how great the shift was and if a patient had cisternal compressions but not if they were only compressed or had been completely eradicated. For both of these the degree of injury has major implications on patient outcome.\\
+\\
+Some of the data is also unclear to its extent. The data includes cerebral contusions but not cerebral lascerations. The distinction between which is that in the case of a cerebral lasceration the \gls{pm} and \gls{am} have been torn at the site of the injury but not in the case of cerebral contusions. As patients have been examined for cerebral contusions which is done by a CT scan\cite{CerebralContusion2020}, the same as cerebral lascerations\cite{CerebralLaceration2018}, the distinction between the injuries could have been made. However the two injuries are grouped together in some classification systems (ICD-9 \& ICD-10\cite{CerebralLaceration2018}\cite{ICD102021}) as they are quite similar.
+
+\clearpage
+
+\printglossary
+\printglossary[type=\acronymtype]
 
 \section{Bibliography}
 
