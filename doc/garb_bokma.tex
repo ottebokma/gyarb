@@ -148,12 +148,12 @@
 
 \subsection*{Bakgrund}
 
-Hjärnskakningar är relativt vanliga skador och framkommer framför allt bland idrottare inom vissa sporter, emepelvis ishockey. Det finns dock olika former av hjänskakningar och symptomen varierar på både lång och kort sikt mellan fallen. Att förutsäga de långvariga symptomen kan vara svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.\\
+Hjärnskakningar är relativt vanliga skador och framkommer framför allt bland idrottare inom vissa sporter, emepelvis ishockey[*cite mayoTBI]. Det finns dock olika former av hjänskakningar och symptomen varierar på både lång och kort sikt mellan fallen. Att förutsäga de långvariga symptomen kan vara svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.[*cite wikiTBI]\\
 \\
-Maskininlärning har visat sig kunna användas effektivt för att identifiera eller förutsäga något utifrån olika variabler. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning skador en person fått.
+Maskininlärning har visat sig kunna användas effektivt för att identifiera eller förutsäga något utifrån olika variabler[*cite wikiML]. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning skador en person fått.
 
 \subsection*{Metod och Slutsats}
-Maskininlärningsmetoden som användes var en så kallad \gls{svm}. Den kördes med olika kernel funktioner vilka ändrar hur algoritmed delar in datan i klasser.\\
+Maskininlärningsmetoden som användes var en så kallad \gls{svm}. Den kördes med olika kernel funktioner vilka ändrar hur algoritmed delar in datan i klasser[*cite wikiKernel].[*cite book]\\
 \\
 Rotterdam och Marshall CT score kunde förutsägas någorlunda tillförlitligt med en \gls{svm} och patienters skador som faktorer. 6 månaders \gls{ptsd} och \gls{gose} poäng för patientens resultat kunde inte förutsägas tillförlitligt. Varken med Marshall och Rotterdam CT score som faktorer eller tillsammans med genetiska faktorer.
 
@@ -161,35 +161,50 @@ Rotterdam och Marshall CT score kunde förutsägas någorlunda tillförlitligt m
 
 \subsection*{Background}
 
-\gls{tbi} is a relatively common condition, especially among athletes of some sports, such icehockey. There are different types of \gls{tbi} and the sypmtoms can vary in both long term and short term. To predict the long term effects of \gls{tbi} can therefore be hard. Some people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.\\
+\gls{tbi} is a relatively common condition, especially among athletes of some sports, such icehockey[*cite mayoTBI]. There are different types of \gls{tbi} and the sypmtoms can vary in both long term and short term. To predict the long term effects of \gls{tbi} can therefore be hard. Some people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.[*cite wikiTBI]\\
 \\
-Machine learning has been shown to be suitable for this type of application, to identify or pedict something based on a set of variables. Thus it could be conceivable that it might be possible to identify possible long term effects based on a \gls{tbi} patients injuries using machine learning.
+Machine learning has been shown to be suitable for this type of application, to identify or pedict something based on a set of variables[*cite wikiML]. Thus it could be conceivable that it might be possible to identify possible long term effects based on a \gls{tbi} patients injuries using machine learning.
 
 \subsection*{Method and Conclusion}
-The type of machine learning algorith used is a \gls{svm}. It was run on several different kernel functions which change how the algorithm divides data into classes.\\
+The type of machine learning algorith used is a \gls{svm}. It was run on several different kernel functions which change how the algorithm divides data into classes[*cite wikiKernel].[*cite book]\\
 \\
 Rotterdam and Marshall \gls{ct} scores could be somewhat reliably predicted using a \gls{svm} and injuries as factors. The 6 month \gls{gose} and \gls{ptsd} scores for patient outcome could not be reliably predicted. Neither using the Marshall and Rotterdam CT scores on their own or with genetic factors.
 \section*{Restrictions}
 The focus of the study lies in trying to use a \gls{svm} to predict the long term effects of \gls{tbi}. Therefore some restrictions have to be made regarding the maths and algorithms behind the \gls{svm} as explainging of it lies beyond the scope of this study.
 
 \section*{Keywords}
-Support Vector Machine, Brain Injury, Machine learning
+Support Vector Machine, Brain Injury, Machine Learning
 
 \newpage
 \tableofcontents
 \newpage
 \section{Introduction}
+ \gls{tbi} is a condition that can be quite hard to diagnose and even if diagnosed the long term effects and symptoms can be hard to identify. This is because there are different types of \gls{tbi} and the symptoms can vary both short term and long term. To predict the effects of \gls{tbi} can therefore be hard. Some people have almost no symptoms while others may have symptoms years after the accident occured.[*cite wikiTBI] \\
+\\
+\gls{tbi} is frequently caused by and a relatively common injury in traffic accidents, physical violence and falls and has a varying presence depending on a persons daily activities. In more than others \gls{tbi} shows among athletes of some sports, such as boxing, american football and icehockey[*cite mayoTBI].[*cite wikiTBI]
+\\
+Machine learning has in recent times gained popularity as it gives a way of identifying acn predicting things humans cannot always do and as such it is used widely for and has varying kinds of applications. It has been shown to be suitable for this type of application, to identify or predict something based on a set of variables. Thus it could be concieved that long term effects of \gls{tbi} could to at least some extent be identified by the injuries a patient has suffered using machine learning.[*cite wikiAI][*cite wikiML]\\
+\\
+As for \gls{TBI} there is a lot of data to be collected about a patients health status at the time of being examined. This data is quite hard for humans to interpret. Using machine learning to interpret this data has the potential to useits capabilities of data classification.[*cite wikiTBI] [*cite TheArticle]
 
 \subsection{Purpose}
-The purpose of the *study/article* is to try to answer the following questions:
+The purpose of the study is to try to answer the following questions:
 
 \begin{enumerate}
   \item{How accurately can the Marshall and Rotterdam classifications be predicted with data of the injuries a patient has sufferd.}
-  \item{Can a correlation between genetic factors and patient outcome be found using machine learning(\gls{gose}, \gls{ptsd}}
-  \item{How well do the Marshall and Rotterdam classifications predict the score of the Extended Glasgow Outcome Scale}
+  \item{How well do the Marshall and Rotterdam classifications predict \gls{ptsd} and the score of the Extended Glasgow Outcome Scale}
+  \item{Can a correlation between genetic factors and patient outcome be found using machine learning(\gls{gose}, \gls{ptsd})}
 \end{enumerate}
 
 \section{Method}
+The type of machine learning algorith used is a \gls{svm}, which have been shown to perform well in many different settings and are considered to be one of the best classifiers to use without considerable optimization for a specific classification problem.\\
+\\
+The classification was conducted by separating data values into features (used for predicting the label) and labels (predicted using features). The features and labels are then divided into training data and test data. In this case the training data consists of 80\% of all data and the test data consists of 20\%. The training data is what the algorithm uses to make a model of a function by which is considers the data to be separable, then this model is tested on the test data and scored by the precentile of correct  classifications.\\
+\\
+The separation of data into training and test data is done for each iteration of running the algorithm and each time the datapoints are separated the datapoints are used for each group are randomize. Thus the data used for training and prediction is not the same every time which means that also the results vary for each iteration of running the algorithm. To make the results more reliable the program runs 3000 iterations for the division of the data, and the algorithm. The score for each iteration is calculated and added to a variable, after which the total sum is divided by the number of iterations to get the average score.\\
+\\
+Results from a few of the iterations are also analyzed manually to see what kind of predictions the algorithm makes. A great part of the label classes are concentrated to just one or two of the classes, meaning that the algorithm can get a score that is quite high by just classifying all labels into one or two classes.
+
 \subsection{Support Vector Machines}
 The support vector machine, or SVM, is a generalization of a classifier called the \textit{maximal margin classifier}. This classifier however, can not be applied to most datasets as it requires classes to be separable by a linear boundary. With the use of the \textit{support vector classifier}, which is an extension of the of the maximalmargin classifier, SVMs become applicable to more datasets. The \textit{support vector machine} is a further extension of the \textit{support vector classifier} that accomomodates for class boundaries that are non-linear. Even further extensions can be made to the \textit{support vector machine} to make it applicable to more than two classes.\cite{jamesSupportVectorMachines}\\
 \\
@@ -491,15 +506,6 @@ rs4938016 is a \gls{snp} in the \gls{ankk1} gene\cite{mcallisterSingleNucleotide
 \subsubsection{rs1800497}
 rs1800497 is a \gls{snp} in the \gls{drd2} gene\cite{Rs1800497SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs3219119 and rs4938016 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
 
-\section{Method}
-The type of machine learning algorith used is a \gls{svm}, which have been shown to perform well in many different settings and are considered to be one of the best classifiers to use without considerable optimization for a specific classification problem.\\
-\\
-The classification was conducted by separating data values into features (used for predicting the label) and labels (predicted using features). The features and labels are then divided into training data and test data. In this case the training data consists of 80\% of all data and the test data consists of 20\%. The training data is what the algorithm uses to make a model of a function by which is considers the data to be separable, then this model is tested on the test data and scored by the precentile of correct  classifications.\\
-\\
-The separation of data into training and test data is done for each iteration of running the algorithm and each time the datapoints are separated the datapoints are used for each group are randomize. Thus the data used for training and prediction is not the same every time which means that also the results vary for each iteration of running the algorithm. To make the results more reliable the program runs 3000 iterations for the division of the data, and the algorithm. The score for each iteration is calculated and added to a variable, after which the total sum is divided by the number of iterations to get the average score.\\
-\\
-Results from a few of the iterations are also analyzed manually to see what kind of predictions the algorithm makes. A great part of the label classes are concentrated to just one or two of the classes, meaning that the algorithm can get a score that is quite high by just classifying all labels into one or two classes.
-
 \section{Results}
 The support vector machine is a supervised learning method which means the data has to be split up into training and testing data. This split affects the results when the classification is socored. Using different training data means the classes will be different and thus it will classify the data differently depending on the training data. For this reason the accuracy of the function varies so 3000 iterations have been run for all the results, except where the number of iterations is stated.
 
@@ -545,31 +551,45 @@ Using the Marshall and Rotterdam \gls{ct} scores along with the genetic factors 
   \item{The 6 month PTSD is not reliably predicted with a SVM using both genetics and the Rotterdam and Marshall \gls{ct} scores as factors}
 \end{enumerate}
 \section{Discussion}
-* from conclsion
-The Rotterdam and Marshall \gls{ct} scores could be somewhat reliably predicted using a SVM and injuries as factors. Even for these the scores were not great and there was quite a significant difference between the accuracy of predicting the two scores. The prediction of the Marshall score being around ten precentage points higher.*\\
-\\
 
-The classification choice problem:\\
-For classification of \gls{tbi} it is intended to get a prediction of what class an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.\\
+\subsection{Classification of 6 month \gls{ptsd} and \gls{gose}}
+As can clearly be concluded from the results, the \gls{svm} could not reliably make predictions for the long term effects that patients had based on the Rotterdam and Marshall CT scores. Neither did it make any substantial difference if genetic factors for the patients were included along with the Rotterdam and Marshall CT scores. This is not altogether suprising as the brain is such a comlex organ and the Rotterdam and Marshall CT scores are a relatively simple patient outcome and mortality prognosis. Similarly genetics, even though they may make some difference in cases of brain injury, rarely depend on just a few genetical differences. Additionally genetical differences are likely to have a lesser impact on patient outcome than the injuries a person has sustained, as such the genetical differences between patients are not likely to help in the prediction of outcome if there is not already a relatively accurate way of doing this without any genetic factors.\\
 \\
-The dataset that is used has a quite limited sample size. The number of samples being so low means that there is a low chance of there being great consistency to be found in the data. What also affects the results is an inherent flaw in the way the research has been conducted. As the intention of a program like this is to find patterns where we humans cannot find them it is important that the program get raw data about something. In this case the data has already been processed and interpreted by humans which means that the program only has access to data that is already processed by humans. If humans cannot, using their observations, with certainty say what has been damaged in the brain and what this will lead to the data that the humans collect will be flawed in this same way.\\
-\\
-To increase chances of success in a project like this it would be advised to use data that has in no way been interpreted by humans. Imaging of the brain is what would be most easily accessible and also seems to be the most relevant for this purpose. Then letting an artificial intelligence algorithm try to classify them into subgroups. Although even this method suffers from the classification choice problem.
+The classification for both six month \gls{ptsd} and \gls{gose} were made using the Marshall and Rotterdam CT scores. This means that the data is already interpreted by humans before the \gls{svm} uses the data. This causes problems as is discussed under the subsection \"Method\" and as such are not optimal for predicting the patient outcome. What can be done is to determine how well these systems for prognosis created by humans work for predicting the long term outcome for patients and how well they translate into predicting other metrics than what they were explicitly designed for.
 
-\subsection{Classification of the Marshall and Rotterdam \gls{ct} scores}
-Classifying the Marshall score the SVM has an average accuracy between 86 and 88\%. This score can be considered high enough to give information of a patients Marshall score with some confidence.\\
+\subsection{Classification of Marshall and Rotterdam \gls{ct} scores}
+For the predicion of the Rotterdam CT score and the Marshall CT score using patient injuries as factors the accuracy of prediction was considerably higher than for the 6 month \gls{ptsd} and \gls{gose}. This can be expected as the scores are defined by presence and degree of injuries which are present in the data. The degree of these injuries is however not present and the predictions were made along with several other injuries that are not accounted for when determining the Marshall and Rotterdam CT scores. As such it would be expected that if one were to run the algorithm using only the injuries which determine the Marshall CT score and Rotterdam CT score along with the degree of said injuries the predictions would be 100\% accurate, however in that case one might as well just determine the score using the set rules for the scores.\\
 \\
-The fact that the score is rather high is not that suprising considering how the Marshall \gls{ct} score is determined. It is determined using midline shift and/or the compression of basal cisterns, and the presence and size of contusions or haemmorages. A lot of this information is also available to the SVM in the dataset which means the algorithm uses the data of the same injuries to determine the Marshall score as is used by humans to do the same. There is one difference though, which is that the data used for training the SVM has no information on the degree of midline shift or the degree of basal cistern compressions. The data only contains if a patient has midline shift or not and if it has basal cistern compressions or not.\\
+Classifying the Marshall score the \gls{svm} has an average accuracy between 86 and 88\%. This score can be considered high enough to give information of a patients Marshall score with some confidence. Classifying the Rotterdam CT score the \gls{svm} has an average accuracy between 71 and 77\%, which is considerably lower than for the Marshall CT score. This level of accuracy can be considered to give some indication of a patients Rotterdam score however the likelyhood of it being wrong is also relatively high.\\
+\\
+What is interesting is the fact that data for other injuries does not disrupt the accuracy for the prediction of the Rotterdam and Marshall CT scores so that the predictons would become inconstitent. And as the accuracy is about the same both when the class weight is the same for all factors and when they are balanced it indicates that the predictions do not rely solely on the factors which define the scores. This could indicate that the Marshall and Rotterdam CT scores do in some way reflect the total degree of damage that a patient has suffered. However to know if this were the case more specific research would have to be conducted on that exact question. The results also show a difference between the Marshall and Rotterdam CT scores as the prediction accuracy for the Marshall CT score was consistently 10-15 percentage points higher than that for the Rotterdam CT score. This indicates that the Marshall CT score is better represented by the injuries which were used to predict the score.\\
+\\
+The fact that the score is rather high is not that suprising considering how the Marshall \gls{ct} score is determined. It is determined using midline shift and/or the compression of basal cisterns, and the presence and size of contusions or haemmorages. A lot of this information is also given to the SVM in the dataset which means the algorithm uses the data of the same injuries to determine the Marshall score as is used by humans to set the score. There is one difference though, which is that the data used for training the SVM has no information on the degree of midline shift or the degree of basal cistern compressions. The data only contains if a patient has midline shift or not and if it has basal cistern compressions or not.\\
 \\
 Even though the SVM scores quite high in classifying the Marshall \gls{ct} score it is less accurate for the higher scores. This is likely due to the fact that the dataset is quite small and that the amount of patients with more severe \gls{tbi} is even smaller. This makes it harder to make clear boundaries for the SVM. Another thing that might affect the accuracy of higher scores is the fact that those are more reliant on the degree of the different injuries used for classification and not merely if the injury has been observed or not.\\
 \\
-It is likely however that even if the higher scores rely more on the degree of injuries that the accuracy might be noticably higher if the dataset used would be larger.
+It is likely however that even if the higher scores rely more on the degree of injuries the accuracy might be noticably higher if the dataset used would be larger.
 
 \subsection{Injury Factors}
-One of the major restrictions created by the data is the fact that a lot of the specifics for injuries are left out. Mostly just indicating if a particular injury was present or not. This makes it more difficult to predict outcome as there is no way of knowing to which extent this injury might have affected the patient. For examlpe the data states whether or not a patient has suffered midline shift but not how great the shift was and if a patient had cisternal compressions but not if they were only compressed or had been completely eradicated. For both of these the degree of injury has major implications on patient outcome.\\
+One of the major restrictions created by the data is the fact that a lot of the specifics for injuries are left out. Mostly the data just indicates if a particular injury was present or not. This makes it more difficult to predict outcome as there is no way of knowing to which extent this injury might have affected the patient. For examlpe the data states whether or not a patient has suffered midline shift but not how great the shift was and if a patient had cisternal compressions but not if they were only compressed or had been completely eradicated. For both of these the degree of injury has major implications on patient outcome.\\
 \\
 Some of the data is also unclear to its extent. The data includes cerebral contusions but not cerebral lascerations. The distinction between which is that in the case of a cerebral lasceration the \gls{pm} and \gls{am} have been torn at the site of the injury but not in the case of cerebral contusions. As patients have been examined for cerebral contusions which is done by a CT scan\cite{CerebralContusion2020}, the same as cerebral lascerations\cite{CerebralLaceration2018}, the distinction between the injuries could have been made. However the two injuries are grouped together in some classification systems (ICD-9 \& ICD-10\cite{CerebralLaceration2018}\cite{ICD102021}) as they are quite similar.
 
+\subsection{The classification choice problem \& correctness metrics}
+For classification of \gls{tbi} it is intended to get a prediction of what class an injury is and how it affects the person in question. This leads to a problem that is: What are the classes? The purpose of this kind of algorithm would be to classify the patients into groups but the problem is defining a group.\\
+\\
+If the groups are pre-defined the algorithm will try to fit the predictions within the boundaries of these groups, which causes a problem as the data might not actually \"fit\" within these groups properly, instead it could be better to use other groups. Knowing what groups would be best to use can however be hard. One way of adressing the problem would be with trial and error to see which definition of classes is most suitable for the prediction model. Another way would be to first determine group boundaries for a dataset. This could be based on the distance between datapoints in an n-dimensional matrix. After the groups had been determined an analysis could be made of what traits the data in each group has. Both of these systems have some drawbacks and benefits. Pre-defined classes allows for the prediction of for this exact class which might be favourable, but as the data might not be suitable it could give worse accuracy. Defining classes for a specific dataset allows for \"better\" and more accurate classes, but it lacks the specificity that pre-defined classes can have, the results might be inconstitent if the dataset is not sufficiently large and varied and the classes might rely heavily on the exact factors that were used for the classification.\\
+\\
+When scoring the predictions made by any type of machine learning of artificial intelligence there are different metrics that can be used. In the case of this study only the accuracy measure is presented in the results. The accuracy is very simple, it shows the percentage of correct predictions for the test data, however it is not always indicative of how well the predictions have been made. Especially in cases such as this where the data is unbalanced, that is when a majority of the datapoints fall into a single or a few of many classes.\\
+\\
+The accuracy score for the prediction of \gls{ptsd} is 30-44\% when using balanced class wights and 75-76\% when class wights are all the same. When balancing class weight the algorithm overcompensates for the low amount of datapoints with \gls{ptsd} so that many are predicted to have \gls{ptsd} even though they do not, and if the class weight is not balanced all predictions are made as 0/false (predicting a patient will not have \gls{tbi}) and thus getting a high accuracy as about 75\% of the patients did not have \gls{ptsd} after six months. In this case the accuracy is quite high but the sensitivity/recall, that is the proportion of patients that had \gls{ptsd} and were predicted as such, is 0\%. The same principles also apply to the predictons of the Marshall and Rotterdam CT scores and six month \gls{gose} score as the data is also very unbalanced for these.\\
+\\
+If further analysis should be done to the results one might include precision, recall and specificity as correctness metrics.
+
+\subsection{Method}
+The dataset that is used has a quite limited sample size. The number of samples being so low means that there is a low chance of there being great consistency to be found in the data. What also affects the results is an inherent flaw in the way the research has been conducted. As the intention of a program like this is to find patterns where we humans cannot find them it is important that the program get raw data of it. In this case the data has already been processed by humans which means that the program only has access to data that has already been interpreted. If humans cannot, using their observations, with certainty say what has been damaged in the brain and what this will lead to the data that the humans collect will be flawed in this same way.\\
+\\
+To increase chances of success in a project like this it would be advised to use data that has in no way been interpreted by humans. Imaging of the brain is what would be most easily accessible and also seems to be the most relevant for this purpose. Then letting an  algorithm try to classify them into subgroups. Using data for which type of injuries a patient has suffered, although already interpreted by humans and classified by their definitions, could work if enough specifics would be included in the data. There is one advantage to this, which is that scientists have long studied how specific injuries affect humans. With this information it would be easier to manually optimize an algorithm for prediction of the effects caused by these injuries. Another alternative would be to use a neural network and feed it raw data that could be considered relevant to the prediction. A neural network could be more accurate and more reliable than a simpler manually optimized algorithm, however it would likely require a much larger quantity of data to train it to work properly. Sufficiently complex neural networks would also learn overtime as new data is given to them, which might make a better predictor with time.
 \clearpage
 
 \printglossary
