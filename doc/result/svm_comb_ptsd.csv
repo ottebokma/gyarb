@@ -1,7 +1,7 @@
 kernel, class weight, score
 linear, balanced, 0.44359
-linear, 1, 0.76085 (only as 0)
+linear, 1, 0.76085
 rbf, balanced, 0.46971
-rbf, 1, 0.76192 (only as 0)
+rbf, 1, 0.76192
 poly, balanced, 0.39571
-poly, 1, 0.75817 (only as 0)
+poly, 1, 0.75817

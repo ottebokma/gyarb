@@ -17,7 +17,7 @@
 \usepackage[toc, acronym]{glossaries}
 
 % settings
-\addbibresource{garb_bibl/garb_bibl.bib}
+\addbibresource{garb_bibl.bib}
 
 % title
 \title{Predicting long term effects if TBI using machine learning}
@@ -148,12 +148,12 @@
 
 \subsection*{Bakgrund}
 
-Hjärnskakningar är relativt vanliga skador och framkommer framför allt bland idrottare inom vissa sporter, emepelvis ishockey[*cite mayoTBI]. Det finns dock olika former av hjänskakningar och symptomen varierar på både lång och kort sikt mellan fallen. Att förutsäga de långvariga symptomen kan vara svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.[*cite wikiTBI]\\
+Hjärnskakningar är relativt vanliga skador och framkommer framför allt bland idrottare inom vissa sporter, emepelvis ishockey\cite{TraumaticBrainInjury}. Det finns dock olika former av hjänskakningar och symptomen varierar på både lång och kort sikt mellan fallen. Att förutsäga de långvariga symptomen kan vara svårt. En del personer påverkas nästan inte medan andra kan få problem som varar i många år.\cite{TraumaticBrainInjury2021}\\
 \\
-Maskininlärning har visat sig kunna användas effektivt för att identifiera eller förutsäga något utifrån olika variabler[*cite wikiML]. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning skador en person fått.
+Maskininlärning har visat sig kunna användas effektivt för att identifiera eller förutsäga något utifrån olika variabler\cite{MachineLearning2021}. Det skulle alltså vara tänkbart att artificiell intelligens till viss mån skulle kunna identifiera möjliga långvariga symptom av en hjärnskakning skador en person fått.
 
 \subsection*{Metod och Slutsats}
-Maskininlärningsmetoden som användes var en så kallad \gls{svm}. Den kördes med olika kernel funktioner vilka ändrar hur algoritmed delar in datan i klasser[*cite wikiKernel].[*cite book]\\
+Maskininlärningsmetoden som användes var en så kallad \gls{svm}. Den kördes med olika kernel funktioner vilka ändrar hur algoritmed delar in datan i klasser\cite{KernelMethod2021}.\cite{jamesSupportVectorMachines}\\
 \\
 Rotterdam och Marshall CT score kunde förutsägas någorlunda tillförlitligt med en \gls{svm} och patienters skador som faktorer. 6 månaders \gls{ptsd} och \gls{gose} poäng för patientens resultat kunde inte förutsägas tillförlitligt. Varken med Marshall och Rotterdam CT score som faktorer eller tillsammans med genetiska faktorer.
 
@@ -161,12 +161,12 @@ Rotterdam och Marshall CT score kunde förutsägas någorlunda tillförlitligt m
 
 \subsection*{Background}
 
-\gls{tbi} is a relatively common condition, especially among athletes of some sports, such icehockey[*cite mayoTBI]. There are different types of \gls{tbi} and the sypmtoms can vary in both long term and short term. To predict the long term effects of \gls{tbi} can therefore be hard. Some people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.[*cite wikiTBI]\\
+\gls{tbi} is a relatively common condition, especially among athletes of some sports, such icehockey\cite{TraumaticBrainInjury}. There are different types of \gls{tbi} and the sypmtoms can vary in both long term and short term. To predict the long term effects of \gls{tbi} can therefore be hard. Some people have almost no long term symptoms whilst others may have sypmtoms years after the accident occured.\cite{TraumaticBrainInjury2021}\\
 \\
-Machine learning has been shown to be suitable for this type of application, to identify or pedict something based on a set of variables[*cite wikiML]. Thus it could be conceivable that it might be possible to identify possible long term effects based on a \gls{tbi} patients injuries using machine learning.
+Machine learning has been shown to be suitable for this type of application, to identify or pedict something based on a set of variables\cite{MachineLearning2021}. Thus it could be conceivable that it might be possible to identify possible long term effects based on a \gls{tbi} patients injuries using machine learning.
 
 \subsection*{Method and Conclusion}
-The type of machine learning algorith used is a \gls{svm}. It was run on several different kernel functions which change how the algorithm divides data into classes[*cite wikiKernel].[*cite book]\\
+The type of machine learning algorith used is a \gls{svm}. It was run on several different kernel functions which change how the algorithm divides data into classes\cite{KernelMethod2021}.\cite{jamesSupportVectorMachines}\\
 \\
 Rotterdam and Marshall \gls{ct} scores could be somewhat reliably predicted using a \gls{svm} and injuries as factors. The 6 month \gls{gose} and \gls{ptsd} scores for patient outcome could not be reliably predicted. Neither using the Marshall and Rotterdam CT scores on their own or with genetic factors.
 \section*{Restrictions}
@@ -179,13 +179,13 @@ Support Vector Machine, Brain Injury, Machine Learning
 \tableofcontents
 \newpage
 \section{Introduction}
- \gls{tbi} is a condition that can be quite hard to diagnose and even if diagnosed the long term effects and symptoms can be hard to identify. This is because there are different types of \gls{tbi} and the symptoms can vary both short term and long term. To predict the effects of \gls{tbi} can therefore be hard. Some people have almost no symptoms while others may have symptoms years after the accident occured.[*cite wikiTBI] \\
+ \gls{tbi} is a condition that can be quite hard to diagnose and even if diagnosed the long term effects and symptoms can be hard to identify. This is because there are different types of \gls{tbi} and the symptoms can vary both short term and long term. To predict the effects of \gls{tbi} can therefore be hard. Some people have almost no symptoms while others may have symptoms years after the accident occured.\cite{TraumaticBrainInjury2021}\cite{TraumaticBrainInjury}\\
 \\
-\gls{tbi} is frequently caused by and a relatively common injury in traffic accidents, physical violence and falls and has a varying presence depending on a persons daily activities. In more than others \gls{tbi} shows among athletes of some sports, such as boxing, american football and icehockey[*cite mayoTBI].[*cite wikiTBI]
+\gls{tbi} is frequently caused by and a relatively common injury in traffic accidents, physical violence and falls and has a varying presence depending on a persons daily activities. In more than others \gls{tbi} shows among athletes of some sports, such as boxing, american football and icehockey\cite{TraumaticBrainInjury}.\cite{TraumaticBrainInjury2021}
 \\
-Machine learning has in recent times gained popularity as it gives a way of identifying acn predicting things humans cannot always do and as such it is used widely for and has varying kinds of applications. It has been shown to be suitable for this type of application, to identify or predict something based on a set of variables. Thus it could be concieved that long term effects of \gls{tbi} could to at least some extent be identified by the injuries a patient has suffered using machine learning.[*cite wikiAI][*cite wikiML]\\
+Machine learning has in recent times gained popularity as it gives a way of identifying acn predicting things humans cannot always do and as such it is used widely for and has varying kinds of applications. It has been shown to be suitable for this type of application, to identify or predict something based on a set of variables. Thus it could be concieved that long term effects of \gls{tbi} could to at least some extent be identified by the injuries a patient has suffered using machine learning.\cite{ArtificialIntelligence2021a}\cite{MachineLearning2021}\\
 \\
-As for \gls{TBI} there is a lot of data to be collected about a patients health status at the time of being examined. This data is quite hard for humans to interpret. Using machine learning to interpret this data has the potential to useits capabilities of data classification.[*cite wikiTBI] [*cite TheArticle]
+As for \gls{TBI} there is a lot of data to be collected about a patients health status at the time of being examined. This data is quite hard for humans to interpret. Using machine learning to interpret this data has the potential to useits capabilities of data classification.\cite{TraumaticBrainInjury2021}\cite{nielsonUncoveringPrecisionPhenotypebiomarker2017}
 
 \subsection{Purpose}
 The purpose of the study is to try to answer the following questions:
@@ -279,7 +279,7 @@ The \gls{svc}, also called the \textit{soft margin classifier}, is based on the 
 \end{figure}
 
 \subsubsection{Support Vector Machine}
-The \gls{svm} is and extension to the \gls{svc} with the use of kernels. The \gls{svm} enlarges the feature space in order to make non-linear division boundaries possible between classes, which the \gls{svc} cannot do as shown in figure *. The type of kernel used with a \gls{svm}\cite{KernelMethod2021} determines what kind of function is used for the separation of classes\cite{SVMKernelsScikitlearn24}.\cite{jamesSupportVectorMachines}
+The \gls{svm} is and extension to the \gls{svc} with the use of kernels. The \gls{svm} enlarges the feature space in order to make non-linear division boundaries possible between classes, which the \gls{svc} cannot do as shown in figure 9. The type of kernel used with a \gls{svm}\cite{KernelMethod2021} determines what kind of function is used for the separation of classes\cite{SVMKernelsScikitlearn24}.\cite{jamesSupportVectorMachines}
 
 \begin{figure}[ht]
   \centering
@@ -294,13 +294,13 @@ The \gls{svm} is and extension to the \gls{svc} with the use of kernels. The \gl
 \end{figure}
 
 \subsubsection{SVMs with More than two Classes}
-\glspl{svm} are in themselves not capable of separating more than two classes which necessitates the use of a way to extend \glspl{svm} to K-cases. The two most used and well-known methods are the \textit{one-versus-one} and \textit{one-versus-all}. In the case of this *study* the \textit{one-versus-one} approach is used for multi-class classifications\cite{jamesSupportVectorMachines}.\\
+\glspl{svm} are in themselves not capable of separating more than two classes which necessitates the use of a way to extend \glspl{svm} to K-cases. The two most used and well-known methods are the \textit{one-versus-one} and \textit{one-versus-all}. In the case of this study the \textit{one-versus-one} approach is used for multi-class classifications\cite{jamesSupportVectorMachines}.\\
 \\
 \textbf{\textit{One-Versus-one Classification}}\\
 The \textit{one-versus-one} approach for multi-class classification constructs $\binom{K}{2}$ \glspl{svm}, where each \gls{svm} compares two classes with eachother. Thus each class is compared to all other classes individually.\cite{jamesSupportVectorMachines}\\
 \\
 \textbf{\textit{One-Versus-all Classification}}
-Using the \textit{one-versus-all} method, for K > 2, fits K \glspl{svm}. Each \gls{svm} is then compared to the remaining K - 1 classes.\cite{jamesSupportVectorMachines}
+Using the \textit{one-versus-all} method, for K $>$ 2, fits K \glspl{svm}. Each \gls{svm} is then compared to the remaining K - 1 classes.\cite{jamesSupportVectorMachines}
 \section{Score}
 
 \subsection{Marshall \gls{ct} Score}
@@ -402,7 +402,7 @@ The Rotterdam \gls{ct} score has probablility of mortality at six months post-in
 \end{enumerate}
 
 \subsection{Extended Glasgow Outcome Scale}
-The GOS-E, or \gls{gose}, is an extension developed to the original Glasgow outcome scale (GOS) in 1981 to address some of its limitations. The original GOS has five categories, these are extended to eight in the GOS-E. In 1998 a questionnare with guidelines was provided to improve the reliability of the GOS ans GOS-E ratings\cite{GOSEExtendedGlasgow}.\cite{ExtendedGlasgowOutcome}\\
+The GOS-E, or \gls{gose}, is an extension developed to the original Glasgow outcome scale (GOS) in 1981 to address some of its limitations. The original GOS has five categories, these are extended to eight in the GOS-E. In 1998 a questionnare with guidelines was provided to improve the reliability of the GOS ans GOS-E ratings\cite{GOSEExtendedGlasgow}.\cite{sanderExtendedGlasgowOutcome2002}\\
 \\
 The categories of the GOS-E are:
 \begin{itemize}
@@ -424,15 +424,12 @@ The categories of the GOS-E are:
 
 \subsubsection{\gls{ct} Brain Pathology}
 Brain pathology is disease in the brain, \gls{ct} brain pathology is the study of brain diseases which can be found by a \gls{ct} scan.
-The data indicates whether any brain pathology could be indicated via a \gls{ct} scan.
+The data indicates whether any brain pathology could be indicated via a \gls{ct} scan.\cite{BrainPathologyDefinition}
 
 \subsubsection{\gls{ct} Skull Fracture}
 The cranial portion of the skulle consists of eight bones. A skull fracture is a fracture or break in any one of these bones. A skull fracture may cause underlying structures such as membranes, blood vessels and brain to be damaged.\cite{SkullFracture2020}\\
 \\
-If no part of skull bone causes damage to tissue around it a skull fracture in itself is not that significant. Skull fractures can occur without there being any other physical or neurological damage. It is however indicative of a significant amount of force applied to the head if there is a skull fracture in healthy bone. When a skull fracture is caused to healthy bone it is likely that this person has suffered a concussion, wether with or without loss of conciousness.\cite{SkullFracture2020}\\
-\\
-Compound fractures
-(major) Types of skull fractures:
+If no part of skull bone causes damage to tissue around it a skull fracture in itself is not that significant. Skull fractures can occur without there being any other physical or neurological damage. It is however indicative of a significant amount of force applied to the head if there is a skull fracture in healthy bone. When a skull fracture is caused to healthy bone it is likely that this person has suffered a concussion, wether with or without loss of conciousness.\cite{SkullFracture2020}
 
 \subsubsection{\gls{ct} Skull Base Fracture}
 Skull base fractures, often referred to as balas or basilar skull fractures, is the break of a bone in the base of the skull. The bones the break can occur in are the temporal bone, occipital bone, sphenoid bone, frontal bone, or ethmoid bone. Depending on where the fracture has occured thefractures are divided into anterior, central or posterior fractures. For a skull base fracture to occur it generally requires a significant amount of trauma. The diagnosis of basal skull fractures is mostly done by a \gls{ct} scan.\cite{BasilarSkullFracture2021}\\
@@ -489,56 +486,48 @@ Cisternal compression refers to the compression or absence of \glspl{bc}, also c
 \subsubsection{rs4680}
 rs4680, sometimes also referred to as Val158Met, Val108/158Met or G1947A, is a \gls{snp} in the \gls{comt} gene. The nucleotide substitution between A and G results in changing the amino acid at codon 158 from valine, for genotype G;G, to methionine, for genotype A;A. The A/Met allele makes a change in the enzyme which has been shown to have lower enzymatic activity (because of thermoinstability).\cite{Rs46802020}\\
 \\
-The activity is supposedly only 25\% of the enzyme coded for in the case of the G/Val allele. The difference in levels of dopamine in the frontal cortex caused by the \gls{snp} is in some cases named the warrior/worrier hypothesis. People with the Met allele are described as ``worriers'' and considered to be more ``exploratory'', a description that is not defined in any exact way\cite{ExploratoryBehaviorOverview}, than people with the Val allele. The Val allele carriers are described as ``warriors'' and considered less ``exploratory''. Some more tangible differences that have been observed and are thought to be caused by the difference in dopamine levels are lower pain threshold, enhanced vulnerability to stress, and higher efficiency for processing information under most conditions for the Met allele, carriers having higher dopamine levels, and higher pain threshold, better stress resiliency, and a modest reduction in executive cognition performance under most conditions for the Val allele, carriers having lower dopamine levels.\cite{Rs4680edia}
-\cite{Rs4680snpedia}
+The activity is supposedly only 25\% of the enzyme coded for in the case of the G/Val allele\cite{Rs4680SNPedia}. This change in the activity of the enzyme may influence the outcome following svere head trauma and have been show to have an association in outcome following mild \gls{tbi}.\cite{winklerCOMTVal1582016}
 
 \subsubsection{rs6277}
-rs6277 (957C>T, Pro319Pro) is an \gls{snp} in the \gls{drd2} gene\cite{Rs6277SNPedia}. It has been shown that there could be a significant association between susceptibility to PTSD and the rs6277 \gls{snp} with individuals having PTSD being more likely to carry the C allele\cite{voiseyDRD2Gene957C2009}.
+rs6277 (957C$>$T, Pro319Pro) is an \gls{snp} in the \gls{drd2} gene\cite{Rs6277SNPedia}. It has been shown that there could be a significant association between susceptibility to PTSD and the rs6277 \gls{snp} with individuals having PTSD being more likely to carry the C allele\cite{voiseyDRD2Gene957C2009}.
 \subsubsection{rs3219119}
 The rs3219119 \gls{snp} has been shown to potentially be an indicator for the outcome in \gls{tbi} cases. It is however not the rs3219119 alone that impacts the outcome in \gls{tbi} as the \gls{snp} is closely associated with the rs3219090 \gls{snp} and the effects caused by variations in one are not independent from variations in the other.\cite{sarnaikInfluencePARP1Polymorphisms2010}
 
 \subsubsection{rs11604671}
-rs11604671 is a \gls{snp} in the \gls{ankk1} gene\cite{Rs11604671SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs4938016 and rs1800497 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
+rs11604671 is a \gls{snp} in the \gls{ankk1} gene\cite{Rs11604671SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs4938016 and rs1800497 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008a}
 
 \subsubsection{rs4938016}
-rs4938016 is a \gls{snp} in the \gls{ankk1} gene\cite{mcallisterSingleNucleotidePolymorphisms2008}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs11604671 and rs1800497 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
+rs4938016 is a \gls{snp} in the \gls{ankk1} gene\cite{mcallisterSingleNucleotidePolymorphisms2008a}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs11604671 and rs1800497 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008a}
 
 \subsubsection{rs1800497}
-rs1800497 is a \gls{snp} in the \gls{drd2} gene\cite{Rs1800497SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs3219119 and rs4938016 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008}
+rs1800497 is a \gls{snp} in the \gls{drd2} gene\cite{Rs1800497SNPedia}. Variations in the \gls{snp} have been shown to along with the \glspl{snp} rs3219119 and rs4938016 to have an impact on cognitive outcome measures after \gls{tbi}.\cite{mcallisterSingleNucleotidePolymorphisms2008a}
 
 \section{Results}
-The support vector machine is a supervised learning method which means the data has to be split up into training and testing data. This split affects the results when the classification is socored. Using different training data means the classes will be different and thus it will classify the data differently depending on the training data. For this reason the accuracy of the function varies so 3000 iterations have been run for all the results, except where the number of iterations is stated.
+The support vector machine is a supervised learning method which means the data has to be split up into training and testing data. This split affects the results when the classification is socored. Using different training data means the classes will be different and thus it will classify the data differently depending on the training data. For this reason the accuracy of the function varies so 3000 iterations have been run for all the results.
 
-\subsection{Injury Factors}
-*Run results for SVM on 3 kernels, balanced \& unbalanced, predicting Marshall and Rotterdam \gls{ct} scores. Run 3000/5000 iterations each time.*
-Initial result: Quite good, about 89\% right for Marhsall and about 70\% for Rotterdam, also many of those not being 1/2 => GOOD\\
-\\
+\subsection{Prediction of Marshall and Rotterdam \gls{ct} scores}
+Using patient injuries for predicting their Marshall and Rotterdam \gls{ct} scores.\\
 \begin{center}
-  \Large{Clasification of Marshall score}\\
-  \csvautotabular{result/svm_inj_mar.csv}\\
-  \Large{Clasification of Rotterdam score}\\
+  Left: Clasification of Marshall score. Right: Clasification of Rotterdam score.
+  \csvautotabular{result/svm_inj_mar.csv} \hspace{.5cm}
   \csvautotabular{result/svm_inj_rot.csv}
 \end{center}
 
-\subsection{Score Factors}
+\subsection{Prediction of \gls{gose} and \gls{ptsd}}
 Using the Marshall and Rotterdam \gls{ct} scores for predicting GOS-E score and PTSD 6 months after injury.\\
-\\
 \begin{center}
-  \Large{Classification of 6 month GOS-E}\\
-  \csvautotabular{result/svm_mar_rot_gose6m.csv}\\
-  \Large{Classification of 6 month PTSD}\\
+  Left: Classification of 6 month GOS-E. Right: Classification of 6 month PTSD.\\
+  \csvautotabular{result/svm_mar_rot_gose6m.csv} \hspace{.5cm}
   \csvautotabular{result/svm_mar_rot_ptsd.csv}
 \end{center}
-
-\subsection{Combined Factors}
+\vspace{1cm}
 Using the Marshall and Rotterdam \gls{ct} scores along with the genetic factors for predicting GOS-E score and PTSD 6 months after injury.\\
-\\
 \begin{center}
-  \Large{Classification of 6 month GOS-E}\\
-  \csvautotabular{result/svm_comb_gose6m.csv}\\
-  \Large{Classification of 6 month PTSD}\\
+  Left: Classification of 6 month GOS-E. Right: Classification of 6 month PTSD.\\
+  \csvautotabular{result/svm_comb_gose6m.csv} \hspace{.5cm}
   \csvautotabular{result/svm_comb_ptsd.csv}
 \end{center}
+For classification of \gls{ptsd} both when using only the Marshall and Rotterdam \gls{ct} scores alone and when using them along with the genetic factors the algorithms that were run with class weight one classified all datapoints as not having \gls{ptsd} after six months. For classification of \gls{gose} using the Marshall and Rotterdam \gls{ct} score, the linear kernel, and class weight one the algorithm only classified the \gls{gose} score as 1, 6 or 8.
 
 \section{Conclusions}
 
