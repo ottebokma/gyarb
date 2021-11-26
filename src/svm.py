@@ -3,7 +3,7 @@ import pandas as pd
 import sklearn
 from sklearn import svm
 from sklearn import metrics
-from sklearn.neighbors import KNeighborsClassifier
+#from sklearn.neighbors import KNeighborsClassifier
 
 #loading data
 data = pd.read_csv("data/journal_pone_0169490_s010.csv")
@@ -31,13 +31,13 @@ print (data.shape)
 
 sum_acc = 0
 
-iter = 3000
+iterations = 3000
 
 for n in range(iter):
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.2)
 
 
-    clf = svm.SVC(kernel="linear ", degree = 3, class_weight = "balanced")
+    clf = svm.SVC(kernel="poly" , degree = 3, class_weight = "balanced")
     clf.fit(x_train, y_train)
 
     y_pred = clf.predict(x_test)
@@ -49,7 +49,7 @@ for n in range(iter):
 
 print(sum_acc)
 
-avg = sum_acc / iter
+avg = sum_acc / iterations
 print (avg)
 
 print (y_pred)
